@@ -52,7 +52,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
 		String[] names = context.getBeanDefinitionNames();  
         Arrays.sort(names);
         for (String string : names) {  
-        	logger.info(string);
+        	logger.debug(string);
         }
 	}
 	@Override  
@@ -67,9 +67,15 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
 	 * @return
 	 */
 	@Bean  
-    public FilterRegistrationBean  basicFilterRegistrationBean() {  
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();  
-        
+    public FilterRegistrationBean  basicFilterRegistrationBean() {
+
+        logger.trace("Trace Message!");
+        logger.debug("Debug Message!");
+        logger.info("Info Message!");
+        logger.warn("Warn Message!");
+        logger.error("Error Message!");
+
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         HTTPBasicAuthorizeAttribute httpBasicFilter = new HTTPBasicAuthorizeAttribute();  
         registrationBean.setFilter(httpBasicFilter);  
         List<String> urlPatterns = new ArrayList<String>();  
@@ -79,7 +85,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
     }  
       
     @Bean  
-    public FilterRegistrationBean jwtFilterRegistrationBean(){  
+    public FilterRegistrationBean jwtFilterRegistrationBean(){
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();  
         HTTPBearerAuthorizeAttribute httpBearerFilter = new HTTPBearerAuthorizeAttribute();  
         registrationBean.setFilter(httpBearerFilter);  

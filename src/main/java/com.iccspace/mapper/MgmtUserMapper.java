@@ -7,8 +7,6 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import com.iccspace.vo.User;
 
-
-
 public interface MgmtUserMapper {
 	@Select("select * from mgmt_user where username = #{userName} and password=#{password}")
 	@Results({
