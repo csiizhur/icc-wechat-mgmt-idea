@@ -1,6 +1,8 @@
 package com.iccspace.config;
 import java.util.Properties;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,10 +15,10 @@ import com.github.pagehelper.PageHelper;
  */
 @Configuration
 public class MyBatisConfiguration {
-       
-   @Bean
-   public PageHelper pageHelper() {
-              System.out.println("MyBatisConfiguration.pageHelper()");
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    @Bean
+    public PageHelper pageHelper() {
+        logger.info("MyBatisConfiguration.pageHelper()");
         PageHelper pageHelper = new PageHelper();
         Properties p = new Properties();
         p.setProperty("offsetAsPageNum", "true");
@@ -24,6 +26,6 @@ public class MyBatisConfiguration {
         p.setProperty("reasonable", "true");
         pageHelper.setProperties(p);
         return pageHelper;
-   }
+    }
        
 }

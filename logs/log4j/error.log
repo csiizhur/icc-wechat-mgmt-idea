@@ -8,3 +8,497 @@
  ERROR MainApplication:76 - Error Message!
 2016-12-20 09:45:33,780 ERROR MainApplication:76 - Error Message!
  ERROR MainApplication:76 - Error Message!
+2016-12-20 10:33:46,588 ERROR MainApplication:76 - Error Message!
+ ERROR MainApplication:76 - Error Message!
+2016-12-20 11:05:22,769 ERROR MainApplication:99 - Error Message!
+ ERROR MainApplication:99 - Error Message!
+2016-12-20 11:08:53,755 ERROR MainApplication:99 - Error Message!
+ ERROR MainApplication:99 - Error Message!
+2016-12-20 11:31:57,056 ERROR MainApplication:111 - Error Message!
+ ERROR MainApplication:111 - Error Message!
+2016-12-20 12:00:06,455 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 12:07:55,953 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 12:08:00,868 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:99)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 12:08:41,665 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 12:08:45,486 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:99)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 12:09:12,271 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 12:09:15,799 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:99)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 12:15:33,408 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 12:15:38,744 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:99)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 12:23:41,771 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 12:23:46,685 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:99)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 13:09:23,006 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 13:09:23,630 ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+ ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+2016-12-20 13:09:23,849 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:115)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:535)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:177)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 13 more
+Caused by: java.lang.IllegalArgumentException: Servlet must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:184)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5178)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-12-20 13:11:27,658 ERROR MainApplication:114 - Error Message!
+ ERROR MainApplication:114 - Error Message!
+2016-12-20 13:21:21,629 ERROR MainApplication:115 - Error Message!
+ ERROR MainApplication:115 - Error Message!
+2016-12-20 13:23:33,476 ERROR MainApplication:115 - Error Message!
+ ERROR MainApplication:115 - Error Message!
+2016-12-20 13:27:58,443 ERROR MainApplication:115 - Error Message!
+ ERROR MainApplication:115 - Error Message!
+2016-12-20 13:38:05,218 ERROR MainApplication:115 - Error Message!
+ ERROR MainApplication:115 - Error Message!
+2016-12-20 13:38:05,627 ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+ ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+2016-12-20 13:38:05,720 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:115)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:535)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:177)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 13 more
+Caused by: java.lang.IllegalArgumentException: Servlet must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:184)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5178)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-12-20 13:38:49,644 ERROR MainApplication:115 - Error Message!
+ ERROR MainApplication:115 - Error Message!
+2016-12-20 13:38:50,052 ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+ ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+2016-12-20 13:38:50,147 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:115)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:535)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:177)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 13 more
+Caused by: java.lang.IllegalArgumentException: Servlet must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:184)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5178)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-12-20 14:09:38,746 ERROR MainApplication:120 - Error Message!
+ ERROR MainApplication:120 - Error Message!
+2016-12-20 14:09:45,085 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:105)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 14:31:19,681 ERROR MainApplication:122 - Error Message!
+ ERROR MainApplication:122 - Error Message!
+2016-12-20 14:31:20,165 ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+ ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+2016-12-20 14:31:20,367 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:115)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:535)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:177)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 13 more
+Caused by: java.lang.IllegalArgumentException: Servlet must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:184)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5178)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-12-20 14:32:00,239 ERROR MainApplication:122 - Error Message!
+ ERROR MainApplication:122 - Error Message!
+2016-12-20 14:32:00,613 ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+ ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+2016-12-20 14:32:00,689 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:115)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:535)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:177)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 13 more
+Caused by: java.lang.IllegalArgumentException: Servlet must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:184)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5178)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-12-20 14:32:25,946 ERROR MainApplication:122 - Error Message!
+ ERROR MainApplication:122 - Error Message!
+2016-12-20 14:32:26,367 ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+ ERROR TomcatStarter:63 - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Servlet must not be null
+2016-12-20 14:32:26,461 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:115)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:82)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:535)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:177)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 13 more
+Caused by: java.lang.IllegalArgumentException: Servlet must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:184)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5178)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1403)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-12-20 14:34:28,241 ERROR MainApplication:122 - Error Message!
+ ERROR MainApplication:122 - Error Message!
+2016-12-20 14:34:33,962 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:107)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 14:35:50,136 ERROR MainApplication:123 - Error Message!
+ ERROR MainApplication:123 - Error Message!
+2016-12-20 14:35:54,263 ERROR SpringApplication:839 - Application startup failed
+ ERROR SpringApplication:839 - Application startup failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.iccspace.MainApplication.main(MainApplication.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.web.client.HttpClientErrorException: 404 null
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:667)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:620)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:580)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:380)
+	at com.iccspace.MainApplication.run(MainApplication.java:108)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 11 more
+2016-12-20 14:38:02,109 ERROR MainApplication:123 - Error Message!
+ ERROR MainApplication:123 - Error Message!
+2016-12-20 14:38:51,681 ERROR MainApplication:123 - Error Message!
+ ERROR MainApplication:123 - Error Message!

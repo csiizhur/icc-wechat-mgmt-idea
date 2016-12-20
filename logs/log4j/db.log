@@ -826,3 +826,39 @@
 2016-12-2009:45:55,351 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
 2016-12-2009:45:55,382 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
 2016-12-2009:45:55,413 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2011:05:29,787 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2011:05:29,881 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: null
+2016-12-2011:05:29,912 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2011:09:00,323 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2011:09:00,354 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2011:09:00,370 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2011:32:02,996 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2011:32:03,012 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2011:32:03,137 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2012:00:17,462 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2012:00:17,604 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2012:00:17,631 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:11:34,568 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:11:34,615 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:11:34,646 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:21:26,652 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:21:26,714 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:21:26,730 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:23:38,945 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:23:38,976 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:23:38,992 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:28:05,569 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:28:05,616 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:28:05,647 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:31:39,239 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:31:39,240 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2013:31:39,264 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2014:38:11,760 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2014:38:11,838 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2014:38:11,869 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2014:38:57,452 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2014:38:57,499 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2014:38:57,530 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2014:39:33,462 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2014:39:33,463 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2014:39:33,481 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
