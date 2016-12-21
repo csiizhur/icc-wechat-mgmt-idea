@@ -1,0 +1,905 @@
+2016-12-2009:36:24,121  INFO MainApplication:48 ---- Starting MainApplication on USER-20160817GA with PID 56572 (F:\company\IdeaProjects\icc-wechat-mgmt-idea\target\classes started by Administrator in F:\company\IdeaProjects\icc-wechat-mgmt-idea)
+2016-12-2009:36:24,121 DEBUG MainApplication:51 ---- Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-12-2009:36:24,121  INFO MainApplication:661 ---- No active profile set, falling back to default profiles: default
+2016-12-2009:36:29,924 DEBUG MainApplication:73 ---- Debug Message!
+2016-12-2009:36:29,924  INFO MainApplication:74 ---- Info Message!
+2016-12-2009:36:29,924  WARN MainApplication:75 ---- Warn Message!
+2016-12-2009:36:29,924 ERROR MainApplication:76 ---- Error Message!
+2016-12-2009:36:34,417  INFO MainApplication:57 ---- Started MainApplication in 11.544 seconds (JVM running for 12.526)
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- actuatorMetricReader
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- applicationContextIdFilter
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- audience-com.iccspace.token.Audience
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- auditEventRepository
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- auditListener
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- autoConfigurationReportEndpoint
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- basicErrorController
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- basicFilterRegistrationBean
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- beanNameHandlerMapping
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- beanNameViewResolver
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- beansEndpoint
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- characterEncodingFilter
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- classPathFileSystemWatcher
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- classPathRestartStrategy
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- configurationPropertiesReportEndpoint
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- conventionErrorViewResolver
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- counterBuffers
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- counterService
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dataSource
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dataSourceInitializer
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dataSourceInitializerPostProcessor
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dataSourcePublicMetrics
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dbHealthIndicator
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- defaultServletHandlerMapping
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- defaultViewResolver
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- diskSpaceHealthIndicator
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- diskSpaceHealthIndicatorProperties
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dispatcherServlet
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dispatcherServletRegistration
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- dumpEndpoint
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- duplicateServerPropertiesDetector
+2016-12-2009:36:34,417 DEBUG MainApplication:55 ---- embeddedServletContainerCustomizerBeanPostProcessor
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpointHandlerMapping
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpointMBeanExporter
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpoints-org.springframework.boot.actuate.endpoint.EndpointProperties
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpoints.cors-org.springframework.boot.actuate.autoconfigure.EndpointCorsProperties
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpoints.health-org.springframework.boot.actuate.autoconfigure.HealthMvcEndpointProperties
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpoints.jmx-org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportProperties
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- endpoints.metrics.filter-org.springframework.boot.actuate.autoconfigure.MetricFilterProperties
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- envInfoContributor
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- environmentEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- environmentMvcEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- error
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- errorAttributes
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- errorPageCustomizer
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- errorPageRegistrarBeanPostProcessor
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- faviconHandlerMapping
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- faviconRequestHandler
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- fileSystemWatcherFactory
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- gaugeBuffers
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- gaugeService
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- halJsonMvcEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- handlerExceptionResolver
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- hateoasObjenesisCacheDisabler
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- healthAggregator
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- healthEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- healthMvcEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- heapdumpMvcEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- hiddenHttpMethodFilter
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- httpPutFormContentFilter
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- httpRequestHandlerAdapter
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- inMemoryDatabaseShutdownExecutor
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- infoEndpoint
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jacksonGeoModule
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jacksonObjectMapper
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jacksonObjectMapperBuilder
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jdbcTemplate
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jsonComponentModule
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jsonWebTokenController
+2016-12-2009:36:34,432 DEBUG MainApplication:55 ---- jwtFilterRegistrationBean
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- keyValueMappingContext
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- liveReloadServer
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- localeCharsetMappingsCustomizer
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mainApplication
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- management.health.status-org.springframework.boot.actuate.autoconfigure.HealthIndicatorProperties
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- management.info-org.springframework.boot.actuate.autoconfigure.InfoContributorProperties
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- management.trace-org.springframework.boot.actuate.trace.TraceProperties
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- managementContextResolver
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- managementServerProperties
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- managementServletContext
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mappingJackson2HttpMessageConverter
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mbeanExporter
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mbeanServer
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- messageConverters
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- metricReaderPublicMetrics
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- metricWritersMetricExporter
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- metricsEndpoint
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- metricsFilter
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- metricsMvcEndpoint
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mgmtUserMapper
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mgmtUserServiceImpl
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- multipartConfigElement
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- multipartResolver
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcContentNegotiationManager
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcConversionService
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcEndpoints
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcPathMatcher
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcResourceUrlProvider
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcUriComponentsContributor
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcUrlPathHelper
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcValidator
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mvcViewResolver
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- namedParameterJdbcTemplate
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- objectNamingStrategy
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- optionalLiveReloadServer
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
+2016-12-2009:36:34,448 DEBUG MainApplication:55 ---- org.springframework.aop.config.internalAutoProxyCreator
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$DocsMvcEndpointConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DataSourcesHealthIndicatorConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DiskSpaceHealthIndicatorConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$RedisHealthIndicatorConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration
+2016-12-2009:36:34,464 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$MetricExportPropertiesConfiguration
+2016-12-2009:36:34,479 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$StatsdConfiguration
+2016-12-2009:36:34,479 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+2016-12-2009:36:34,479 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+2016-12-2009:36:34,479 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$FastMetricServicesConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$DataSourceMetricsConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$TomcatMetricsConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.AutoConfigurationPackages
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+2016-12-2009:36:34,495 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$TransactionManagementConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+2016-12-2009:36:34,542 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalCommonAnnotationProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalRequiredAnnotationProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalScheduledAnnotationProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.event.internalEventListenerFactory
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.context.event.internalEventListenerProcessor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport_Predictor
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration
+2016-12-2009:36:34,557 DEBUG MainApplication:55 ---- org.springframework.data.web.config.SpringDataJacksonConfiguration
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- org.springframework.scheduling.annotation.SchedulingConfiguration
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- org.springframework.transaction.config.internalTransactionAdvisor
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- org.springframework.transaction.config.internalTransactionalEventListenerFactory
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- pageableResolver
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- pagedResourcesAssembler
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- pagedResourcesAssemblerArgumentResolver
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- persistenceExceptionTranslationPostProcessor
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- preserveErrorControllerTargetClassPostProcessor
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- propertySourcesPlaceholderConfigurer
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisConnectionFactory
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisConverter
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisCustomConversions
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisHealthIndicator
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisKeyValueAdapter
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisKeyValueTemplate
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisReferenceResolver
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- redisTemplate
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- requestContextFilter
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- requestMappingEndpoint
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- requestMappingHandlerAdapter
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- requestMappingHandlerMapping
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- resourceHandlerMapping
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- restTemplateBuilder
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- serverProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- shutdownEndpoint
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- simpleControllerHandlerAdapter
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- sortResolver
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.devtools-org.springframework.boot.devtools.autoconfigure.DevToolsProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+2016-12-2009:36:34,573 DEBUG MainApplication:55 ---- spring.metrics.export-org.springframework.boot.actuate.metrics.export.MetricExportProperties
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- sqlSessionFactory
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- sqlSessionTemplate
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- standardJacksonObjectMapperBuilderCustomizer
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- stringHttpMessageConverter
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- stringRedisTemplate
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- systemPublicMetrics
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- tomcatEmbeddedServletContainerFactory
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- tomcatPoolDataSourceMetadataProvider
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- tomcatPublicMetrics
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- traceEndpoint
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- traceRepository
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- transactionAttributeSource
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- transactionInterceptor
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- transactionManager
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- transactionTemplate
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- viewControllerHandlerMapping
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- viewResolver
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- webRequestLoggingFilter
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- websocketContainerCustomizer
+2016-12-2009:36:34,588 DEBUG MainApplication:55 ---- welcomePageHandlerMapping
+2016-12-2009:37:38,129  INFO MainApplication:48 ---- Starting MainApplication on USER-20160817GA with PID 56024 (F:\company\IdeaProjects\icc-wechat-mgmt-idea\target\classes started by Administrator in F:\company\IdeaProjects\icc-wechat-mgmt-idea)
+2016-12-2009:37:38,129 DEBUG MainApplication:51 ---- Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-12-2009:37:38,129  INFO MainApplication:661 ---- No active profile set, falling back to default profiles: default
+2016-12-2009:37:42,762 DEBUG MainApplication:73 ---- Debug Message!
+2016-12-2009:37:42,762  INFO MainApplication:74 ---- Info Message!
+2016-12-2009:37:42,762  WARN MainApplication:75 ---- Warn Message!
+2016-12-2009:37:42,762 ERROR MainApplication:76 ---- Error Message!
+2016-12-2009:37:47,382  INFO MainApplication:57 ---- Started MainApplication in 9.986 seconds (JVM running for 10.786)
+2016-12-2009:37:47,382 DEBUG MainApplication:55 ---- actuatorMetricReader
+2016-12-2009:37:47,382 DEBUG MainApplication:55 ---- applicationContextIdFilter
+2016-12-2009:37:47,382 DEBUG MainApplication:55 ---- audience-com.iccspace.token.Audience
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- auditEventRepository
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- auditListener
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- autoConfigurationReportEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- basicErrorController
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- basicFilterRegistrationBean
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- beanNameHandlerMapping
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- beanNameViewResolver
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- beansEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- characterEncodingFilter
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- classPathFileSystemWatcher
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- classPathRestartStrategy
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- configurationPropertiesReportEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- conventionErrorViewResolver
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- counterBuffers
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- counterService
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dataSource
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dataSourceInitializer
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dataSourceInitializerPostProcessor
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dataSourcePublicMetrics
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dbHealthIndicator
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- defaultServletHandlerMapping
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- defaultViewResolver
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- diskSpaceHealthIndicator
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- diskSpaceHealthIndicatorProperties
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dispatcherServlet
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dispatcherServletRegistration
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- dumpEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- duplicateServerPropertiesDetector
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- embeddedServletContainerCustomizerBeanPostProcessor
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpointHandlerMapping
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpointMBeanExporter
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpoints-org.springframework.boot.actuate.endpoint.EndpointProperties
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpoints.cors-org.springframework.boot.actuate.autoconfigure.EndpointCorsProperties
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpoints.health-org.springframework.boot.actuate.autoconfigure.HealthMvcEndpointProperties
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpoints.jmx-org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportProperties
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- endpoints.metrics.filter-org.springframework.boot.actuate.autoconfigure.MetricFilterProperties
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- envInfoContributor
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- environmentEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- environmentMvcEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- error
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- errorAttributes
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- errorPageCustomizer
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- errorPageRegistrarBeanPostProcessor
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- faviconHandlerMapping
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- faviconRequestHandler
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- fileSystemWatcherFactory
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- gaugeBuffers
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- gaugeService
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- halJsonMvcEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- handlerExceptionResolver
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- hateoasObjenesisCacheDisabler
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- healthAggregator
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- healthEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- healthMvcEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- heapdumpMvcEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- hiddenHttpMethodFilter
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- httpPutFormContentFilter
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- httpRequestHandlerAdapter
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- inMemoryDatabaseShutdownExecutor
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- infoEndpoint
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jacksonGeoModule
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jacksonObjectMapper
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jacksonObjectMapperBuilder
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jdbcTemplate
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jsonComponentModule
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jsonWebTokenController
+2016-12-2009:37:47,397 DEBUG MainApplication:55 ---- jwtFilterRegistrationBean
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- keyValueMappingContext
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- liveReloadServer
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- localeCharsetMappingsCustomizer
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mainApplication
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- management.health.status-org.springframework.boot.actuate.autoconfigure.HealthIndicatorProperties
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- management.info-org.springframework.boot.actuate.autoconfigure.InfoContributorProperties
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- management.trace-org.springframework.boot.actuate.trace.TraceProperties
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- managementContextResolver
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- managementServerProperties
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- managementServletContext
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mappingJackson2HttpMessageConverter
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mbeanExporter
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mbeanServer
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- messageConverters
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- metricReaderPublicMetrics
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- metricWritersMetricExporter
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- metricsEndpoint
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- metricsFilter
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- metricsMvcEndpoint
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mgmtUserMapper
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mgmtUserServiceImpl
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- multipartConfigElement
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- multipartResolver
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcContentNegotiationManager
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcConversionService
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcEndpoints
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcPathMatcher
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcResourceUrlProvider
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcUriComponentsContributor
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcUrlPathHelper
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcValidator
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mvcViewResolver
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- namedParameterJdbcTemplate
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- objectNamingStrategy
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- optionalLiveReloadServer
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
+2016-12-2009:37:47,413 DEBUG MainApplication:55 ---- org.springframework.aop.config.internalAutoProxyCreator
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$DocsMvcEndpointConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DataSourcesHealthIndicatorConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DiskSpaceHealthIndicatorConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$RedisHealthIndicatorConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$MetricExportPropertiesConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$StatsdConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+2016-12-2009:37:47,429 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$FastMetricServicesConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$DataSourceMetricsConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$TomcatMetricsConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.AutoConfigurationPackages
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+2016-12-2009:37:47,444 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$TransactionManagementConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+2016-12-2009:37:47,460 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalCommonAnnotationProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalRequiredAnnotationProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalScheduledAnnotationProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.event.internalEventListenerFactory
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.context.event.internalEventListenerProcessor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport_Predictor
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration
+2016-12-2009:37:47,475 DEBUG MainApplication:55 ---- org.springframework.data.web.config.SpringDataJacksonConfiguration
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- org.springframework.scheduling.annotation.SchedulingConfiguration
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- org.springframework.transaction.config.internalTransactionAdvisor
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- org.springframework.transaction.config.internalTransactionalEventListenerFactory
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- pageableResolver
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- pagedResourcesAssembler
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- pagedResourcesAssemblerArgumentResolver
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- persistenceExceptionTranslationPostProcessor
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- preserveErrorControllerTargetClassPostProcessor
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- propertySourcesPlaceholderConfigurer
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisConnectionFactory
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisConverter
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisCustomConversions
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisHealthIndicator
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisKeyValueAdapter
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisKeyValueTemplate
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisReferenceResolver
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- redisTemplate
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- requestContextFilter
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- requestMappingEndpoint
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- requestMappingHandlerAdapter
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- requestMappingHandlerMapping
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- resourceHandlerMapping
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- restTemplateBuilder
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- serverProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- shutdownEndpoint
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- simpleControllerHandlerAdapter
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- sortResolver
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.devtools-org.springframework.boot.devtools.autoconfigure.DevToolsProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+2016-12-2009:37:47,491 DEBUG MainApplication:55 ---- spring.metrics.export-org.springframework.boot.actuate.metrics.export.MetricExportProperties
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- sqlSessionFactory
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- sqlSessionTemplate
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- standardJacksonObjectMapperBuilderCustomizer
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- stringHttpMessageConverter
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- stringRedisTemplate
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- systemPublicMetrics
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- tomcatEmbeddedServletContainerFactory
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- tomcatPoolDataSourceMetadataProvider
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- tomcatPublicMetrics
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- traceEndpoint
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- traceRepository
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- transactionAttributeSource
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- transactionInterceptor
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- transactionManager
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- transactionTemplate
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- viewControllerHandlerMapping
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- viewResolver
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- webRequestLoggingFilter
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- websocketContainerCustomizer
+2016-12-2009:37:47,507 DEBUG MainApplication:55 ---- welcomePageHandlerMapping
+2016-12-2009:38:44,875 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2009:38:44,953 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2009:38:44,984 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2009:40:33,006  INFO MainApplication:48 ---- Starting MainApplication on USER-20160817GA with PID 59296 (F:\company\IdeaProjects\icc-wechat-mgmt-idea\target\classes started by Administrator in F:\company\IdeaProjects\icc-wechat-mgmt-idea)
+2016-12-2009:40:33,007 DEBUG MainApplication:51 ---- Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+2016-12-2009:40:33,008  INFO MainApplication:661 ---- No active profile set, falling back to default profiles: default
+2016-12-2009:40:38,477 DEBUG MainApplication:73 ---- Debug Message!
+2016-12-2009:40:38,477  INFO MainApplication:74 ---- Info Message!
+2016-12-2009:40:38,477  WARN MainApplication:75 ---- Warn Message!
+2016-12-2009:40:38,477 ERROR MainApplication:76 ---- Error Message!
+2016-12-2009:40:42,691  INFO MainApplication:57 ---- Started MainApplication in 10.461 seconds (JVM running for 11.206)
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- actuatorMetricReader
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- applicationContextIdFilter
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- audience-com.iccspace.token.Audience
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- auditEventRepository
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- auditListener
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- autoConfigurationReportEndpoint
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- basicErrorController
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- basicFilterRegistrationBean
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- beanNameHandlerMapping
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- beanNameViewResolver
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- beansEndpoint
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- characterEncodingFilter
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- classPathFileSystemWatcher
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- classPathRestartStrategy
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- configurationPropertiesReportEndpoint
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- conventionErrorViewResolver
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- counterBuffers
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- counterService
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- dataSource
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- dataSourceInitializer
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- dataSourceInitializerPostProcessor
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- dataSourcePublicMetrics
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- dbHealthIndicator
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- defaultServletHandlerMapping
+2016-12-2009:40:42,691 DEBUG MainApplication:55 ---- defaultViewResolver
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- diskSpaceHealthIndicator
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- diskSpaceHealthIndicatorProperties
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- dispatcherServlet
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- dispatcherServletRegistration
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- dumpEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- duplicateServerPropertiesDetector
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- embeddedServletContainerCustomizerBeanPostProcessor
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpointHandlerMapping
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpointMBeanExporter
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpoints-org.springframework.boot.actuate.endpoint.EndpointProperties
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpoints.cors-org.springframework.boot.actuate.autoconfigure.EndpointCorsProperties
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpoints.health-org.springframework.boot.actuate.autoconfigure.HealthMvcEndpointProperties
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpoints.jmx-org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportProperties
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- endpoints.metrics.filter-org.springframework.boot.actuate.autoconfigure.MetricFilterProperties
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- envInfoContributor
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- environmentEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- environmentMvcEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- error
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- errorAttributes
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- errorPageCustomizer
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- errorPageRegistrarBeanPostProcessor
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- faviconHandlerMapping
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- faviconRequestHandler
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- fileSystemWatcherFactory
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- gaugeBuffers
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- gaugeService
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- halJsonMvcEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- handlerExceptionResolver
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- hateoasObjenesisCacheDisabler
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- healthAggregator
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- healthEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- healthMvcEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- heapdumpMvcEndpoint
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- hiddenHttpMethodFilter
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- httpPutFormContentFilter
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- httpRequestHandlerAdapter
+2016-12-2009:40:42,707 DEBUG MainApplication:55 ---- inMemoryDatabaseShutdownExecutor
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- infoEndpoint
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jacksonGeoModule
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jacksonObjectMapper
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jacksonObjectMapperBuilder
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jdbcTemplate
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jsonComponentModule
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jsonWebTokenController
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- jwtFilterRegistrationBean
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- keyValueMappingContext
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- liveReloadServer
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- localeCharsetMappingsCustomizer
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mainApplication
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- management.health.status-org.springframework.boot.actuate.autoconfigure.HealthIndicatorProperties
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- management.info-org.springframework.boot.actuate.autoconfigure.InfoContributorProperties
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- management.trace-org.springframework.boot.actuate.trace.TraceProperties
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- managementContextResolver
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- managementServerProperties
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- managementServletContext
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mappingJackson2HttpMessageConverter
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mbeanExporter
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mbeanServer
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- messageConverters
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- metricReaderPublicMetrics
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- metricWritersMetricExporter
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- metricsEndpoint
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- metricsFilter
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- metricsMvcEndpoint
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mgmtUserMapper
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mgmtUserServiceImpl
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- multipartConfigElement
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- multipartResolver
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcContentNegotiationManager
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcConversionService
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcEndpoints
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcPathMatcher
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcResourceUrlProvider
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcUriComponentsContributor
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcUrlPathHelper
+2016-12-2009:40:42,801 DEBUG MainApplication:55 ---- mvcValidator
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- mvcViewResolver
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- namedParameterJdbcTemplate
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- objectNamingStrategy
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- optionalLiveReloadServer
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.aop.config.internalAutoProxyCreator
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$DocsMvcEndpointConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DataSourcesHealthIndicatorConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DiskSpaceHealthIndicatorConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$RedisHealthIndicatorConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+2016-12-2009:40:42,816 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$MetricExportPropertiesConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$StatsdConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$FastMetricServicesConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$DataSourceMetricsConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$TomcatMetricsConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.AutoConfigurationPackages
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$TransactionManagementConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+2016-12-2009:40:42,832 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration
+2016-12-2009:40:42,847 DEBUG MainApplication:55 ---- org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalCommonAnnotationProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalRequiredAnnotationProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.annotation.internalScheduledAnnotationProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.event.internalEventListenerFactory
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.context.event.internalEventListenerProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport_Predictor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.data.web.config.SpringDataJacksonConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.scheduling.annotation.SchedulingConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.transaction.config.internalTransactionAdvisor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- org.springframework.transaction.config.internalTransactionalEventListenerFactory
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- pageableResolver
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- pagedResourcesAssembler
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- pagedResourcesAssemblerArgumentResolver
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- persistenceExceptionTranslationPostProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- preserveErrorControllerTargetClassPostProcessor
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- propertySourcesPlaceholderConfigurer
+2016-12-2009:40:42,863 DEBUG MainApplication:55 ---- redisConnectionFactory
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisConverter
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisCustomConversions
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisHealthIndicator
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisKeyValueAdapter
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisKeyValueTemplate
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisReferenceResolver
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- redisTemplate
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- requestContextFilter
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- requestMappingEndpoint
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- requestMappingHandlerAdapter
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- requestMappingHandlerMapping
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- resourceHandlerMapping
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- restTemplateBuilder
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- serverProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- shutdownEndpoint
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- simpleControllerHandlerAdapter
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- sortResolver
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.devtools-org.springframework.boot.devtools.autoconfigure.DevToolsProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.metrics.export-org.springframework.boot.actuate.metrics.export.MetricExportProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- sqlSessionFactory
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- sqlSessionTemplate
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- standardJacksonObjectMapperBuilderCustomizer
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- stringHttpMessageConverter
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- stringRedisTemplate
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- systemPublicMetrics
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- tomcatEmbeddedServletContainerFactory
+2016-12-2009:40:42,879 DEBUG MainApplication:55 ---- tomcatPoolDataSourceMetadataProvider
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- tomcatPublicMetrics
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- traceEndpoint
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- traceRepository
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- transactionAttributeSource
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- transactionInterceptor
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- transactionManager
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- transactionTemplate
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- viewControllerHandlerMapping
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- viewResolver
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- webRequestLoggingFilter
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- websocketContainerCustomizer
+2016-12-2009:40:42,894 DEBUG MainApplication:55 ---- welcomePageHandlerMapping
+2016-12-2009:41:29,185 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2009:41:29,216 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2009:41:29,247 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2009:43:37,848 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2009:43:37,879 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2009:43:37,894 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2009:45:55,351 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2009:45:55,382 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2009:45:55,413 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2011:05:29,787 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2011:05:29,881 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: null
+2016-12-2011:05:29,912 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2011:09:00,323 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2011:09:00,354 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2011:09:00,370 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2011:32:02,996 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2011:32:03,012 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2011:32:03,137 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2012:00:17,462 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2012:00:17,604 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2012:00:17,631 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:11:34,568 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:11:34,615 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:11:34,646 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:21:26,652 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:21:26,714 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:21:26,730 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:23:38,945 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:23:38,976 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:23:38,992 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:28:05,569 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:28:05,616 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2013:28:05,647 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2013:31:39,239 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2013:31:39,240 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2013:31:39,264 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2014:38:11,760 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2014:38:11,838 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2014:38:11,869 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2014:38:57,452 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2014:38:57,499 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2014:38:57,530 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2014:39:33,462 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2014:39:33,463 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号2(String)
+2016-12-2014:39:33,481 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 0
+2016-12-2015:34:51,835 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2015:34:51,991 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2015:34:52,022 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2015:38:37,911 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2015:38:37,943 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2015:38:37,990 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2015:39:04,863 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from ADMIN where mobile=? 
+2016-12-2015:39:04,863 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2015:40:28,350 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2015:40:28,382 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2015:40:28,413 DEBUG queryMgmtUserByUserName:145 ---- <==      Total: 1
+2016-12-2015:40:32,071 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from 'wechat-server-db'.ADMIN where mobile=? 
+2016-12-2015:40:32,071 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2015:42:28,424 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2015:42:28,455 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2015:42:37,390 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from 'wechat-server-db'.ADMIN where mobile=? 
+2016-12-2015:42:37,390 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2015:43:59,826 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2015:43:59,842 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2015:44:01,102 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2015:44:01,102 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2015:44:01,133 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2016:15:36,809 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2016:15:36,840 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2016:19:42,670 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2016:19:42,701 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2016:23:01,960 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2016:23:01,976 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2016:23:12,891 DEBUG queryAdminInfoByMobileAndPassword:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? and password=? 
+2016-12-2016:23:12,891 DEBUG queryAdminInfoByMobileAndPassword:145 ---- ==> Parameters: 13916176592(String), 111111(String)
+2016-12-2016:23:12,938 DEBUG queryAdminInfoByMobileAndPassword:145 ---- <==      Total: 0
+2016-12-2016:33:10,128 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2016:33:10,144 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2016:33:15,904 DEBUG queryAdminInfoByMobileAndPassword:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? and password=? 
+2016-12-2016:33:15,904 DEBUG queryAdminInfoByMobileAndPassword:145 ---- ==> Parameters: 13916176592(String), 685e1ca3c6bb2562df2ccf84d5182d23(String)
+2016-12-2016:33:15,952 DEBUG queryAdminInfoByMobileAndPassword:145 ---- <==      Total: 1
+2016-12-2016:33:15,952 DEBUG updateAdminPassword:145 ---- ==>  Preparing: update ADMIN set password=? where mobile=? and id=? 
+2016-12-2016:33:15,952 DEBUG updateAdminPassword:145 ---- ==> Parameters: 9c29dd7a82a0316c3ab27b52e90dd346(String), 13916176592(String), easddgdfg(String)
+2016-12-2016:33:16,018 DEBUG updateAdminPassword:145 ---- <==    Updates: 1
+2016-12-2017:33:57,955 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2017:33:58,059 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)

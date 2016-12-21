@@ -8,13 +8,13 @@ package com.iccspace.token;
 public class ResultMsg {  
     private int errcode;  
     private String errmsg;  
-    private Object p2pdata;  
+    private Object resultdata;
       
-    public ResultMsg(int ErrCode, String ErrMsg, Object P2pData)  
+    public ResultMsg(int ErrCode, String ErrMsg, Object resultData)
     {  
         this.errcode = ErrCode;  
         this.errmsg = ErrMsg;  
-        this.p2pdata = P2pData;  
+        this.resultdata = resultData;
     }  
     public int getErrcode() {  
         return errcode;  
@@ -28,10 +28,9 @@ public class ResultMsg {
     public void setErrmsg(String errmsg) {  
         this.errmsg = errmsg;  
     }  
-    public Object getP2pdata() {  
-        return p2pdata;  
+    public Object getResultdata() {
+        return resultdata;
     }  
-    public void setP2pdata(Object p2pdata) {  
-        this.p2pdata = p2pdata;  
+    public void setResultdata(Object resultdata) {this.resultdata = resultdata;
     }  
 }

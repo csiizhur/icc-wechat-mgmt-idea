@@ -2,12 +2,20 @@ package com.iccspace.token;
 public enum ResultStatusCode {  
     OK(0, "OK"),  
     SYSTEM_ERR(30001, "System error"),
-	INVALID_CLIENTID(30003, "Invalid clientid"),  
-	INVALID_PASSWORD(30004, "User name or password is incorrect"),  
-	INVALID_CAPTCHA(30005, "Invalid captcha or captcha overdue"),  
-	INVALID_TOKEN(30006, "Invalid token"),
-	PERMISSION_DENIED(30007,"asdfgsf");
-    private int errcode;  
+	INVALID_CLIENTID(30002, "Invalid clientid"),
+	INVALID_PASSWORD(30003, "User name or password is incorrect"),
+	INVALID_CAPTCHA(30004, "Invalid captcha or captcha overdue"),
+	INVALID_TOKEN(30005, "Invalid token"),
+	PERMISSION_DENIED(30006,"asdfgsf"),
+    MOBILE_ISNULL(30007,"Mobile is null"),
+    PASSWORD_ISNULL(30008,"Password is null"),
+    MOBILE_ISSIGN(30009,"Mobile is sign in system"),
+    REDIS_VAILDCODE(30011,"Vaildcode is not in redis"),
+    VAILDCODE_ISNULL(30012,"Vaildcode is null"),
+    INVALID_VAILDCODE(30013,"VaildCode is incorrect"),
+    INVALID_NEWPASSWORD(30014,"Newpassword equals oldpassword"),
+    INVALID_REDIS_TOKEN(30015,"Invalid redis token");
+    private int errcode;
     private String errmsg;  
     public int getErrcode() {  
         return errcode;  
@@ -27,6 +35,6 @@ public enum ResultStatusCode {
     private ResultStatusCode(int Errode, String ErrMsg)  
     {  
         this.errcode = Errode;  
-        this.errmsg = ErrMsg;  
+        this.errmsg = ErrMsg;
     }  
 }

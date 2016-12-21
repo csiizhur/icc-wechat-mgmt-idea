@@ -63,7 +63,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) { 
 		container.setPort(8896);
-		container.setContextPath("/app");
+		container.setContextPath("/Api");
 
 	}
 
@@ -136,9 +136,9 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();  
         HTTPBearerAuthorizeAttribute httpBearerFilter = new HTTPBearerAuthorizeAttribute();  
         registrationBean.setFilter(httpBearerFilter);  
-        List<String> urlPatterns = new ArrayList<String>();  
-        urlPatterns.add("/user/getUser");  
-        registrationBean.setUrlPatterns(urlPatterns);  
+        List<String> urlPatterns = new ArrayList<String>();
+        urlPatterns.add("/admin/restPassword");
+        registrationBean.setUrlPatterns(urlPatterns);
         return registrationBean;  
     }
 
