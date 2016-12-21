@@ -40,7 +40,7 @@ public class AdminServiceImpl implements AdminService{
                     ResultStatusCode.MOBILE_ISSIGN.getErrmsg(),null);
         }
         int rows=adminMapper.insertAdminAccount(admin);
-        if(rows>Constants.AFFECT_DB_ROWS_0){
+        if(rows == Constants.AFFECT_DB_ROWS_1){
             resultMsg=new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"sign up account success",null);
             return resultMsg;
         }else{
@@ -133,7 +133,7 @@ public class AdminServiceImpl implements AdminService{
         user.setPassword(MyMD5Utils.getMD5(adminEdit.getNewPassword()+"salt"));
         int result=adminMapper.updateAdminPassword(user);
 
-        if(result> Constants.AFFECT_DB_ROWS_0){
+        if(result == Constants.AFFECT_DB_ROWS_1){
             return new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"",null);
         }else{
             return new ResultMsg(Constants.OPERATOR_DB_ERROR,Constants.OPERATOR_DB_ERROR_MESSAGE,null);

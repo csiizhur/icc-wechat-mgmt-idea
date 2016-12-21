@@ -3,7 +3,7 @@ package com.iccspace.controller.model;
 /**
  * Created by Administrator on 2016/12/21.
  */
-public class ShopsHistoryRequest {
+public class ShopsListRequest {
     private int releaseType;
     private String businessType;
     private String estatesType;

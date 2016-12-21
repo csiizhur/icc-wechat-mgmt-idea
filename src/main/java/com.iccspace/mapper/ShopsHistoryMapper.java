@@ -1,6 +1,7 @@
 package com.iccspace.mapper;
 
-import com.iccspace.controller.model.ShopsHistoryRequest;
+import com.iccspace.controller.model.ShopsEditModel;
+import com.iccspace.controller.model.ShopsListRequest;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -28,7 +29,7 @@ public interface ShopsHistoryMapper {
             @Result(column = "CREATE_TIME",property = "releaseDate"),
             @Result(column = "MOBILEPHONE",property = "mobilePhone")
     })
-    public List<Map<String,Object>> queryShopsHistoryList(ShopsHistoryRequest shopsHistoryRequest);
+    public List<Map<String,Object>> queryShopsHistoryList(ShopsListRequest shopsListRequest);
 
     @Select("select ID,OSS_URL from SHOPS_PHOTOS_INFO where SHOPSID=#{shopsId}")
     @Results({
@@ -67,10 +68,10 @@ public interface ShopsHistoryMapper {
             "floor=#{floor}," +
             "rent_fee=#{rentFee}" +
             "where id=#{shopsId}")
-    public int updateHistoryShops(String shopsId);
+    public int updateHistoryShops(ShopsEditModel shopsEditModel);
 
     @Update("update SHOPS set shop_size=#{shopSize}," +
             "address=#{shopsAddress}" +
             "where historyid=#{shopsId}")
-    public int updateBaseShops(String shopsId);
+    public int updateBaseShops(ShopsEditModel shopsEditModel);
 }

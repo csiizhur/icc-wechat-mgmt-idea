@@ -26,7 +26,6 @@ public class Constants {
 	public static final String DELETE_DATA_ERROR_CODE="";
 	public static final String DELETE_DATA_ERROR_MESSAGE="delete data error";
 
-	public static final int AFFECT_DB_ROWS_0=0;
 	public static final int AFFECT_DB_ROWS_1=1;
 
 	public static final int OPERATOR_DB_SUCCESS=0;

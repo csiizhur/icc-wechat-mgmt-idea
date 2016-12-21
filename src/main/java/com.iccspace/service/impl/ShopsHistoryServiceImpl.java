@@ -1,7 +1,8 @@
 package com.iccspace.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
-import com.iccspace.controller.model.ShopsHistoryRequest;
+import com.iccspace.controller.model.ShopsEditModel;
+import com.iccspace.controller.model.ShopsListRequest;
 import com.iccspace.core.Constants;
 import com.iccspace.mapper.ShopsHistoryMapper;
 import com.iccspace.service.ShopsHistoryService;
@@ -22,9 +23,9 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
     private ShopsHistoryMapper shopsHistoryMapper;
 
     @Override
-    public ResultMsg shopsList(ShopsHistoryRequest shopsHistoryRequest) {
+    public ResultMsg shopsList(ShopsListRequest shopsListRequest) {
 
-        List<Map<String,Object>> list = shopsHistoryMapper.queryShopsHistoryList(shopsHistoryRequest);
+        List<Map<String,Object>> list = shopsHistoryMapper.queryShopsHistoryList(shopsListRequest);
 
         ResultMsg resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"shops list", JSONArray.toJSON(list));
 
@@ -51,5 +52,19 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
         Map<String,Object> map = shopsHistoryMapper.queryShopsDetailByShopsId(shopsId);
         resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"shops detail",map);
         return resultMsg;
+    }
+
+    @Override
+    public ResultMsg shopsEdit(ShopsEditModel shopsEditModel) {
+        ResultMsg resultMsg;
+        int base_result = shopsHistoryMapper.updateBaseShops(shopsEditModel);
+        int history_result = shopsHistoryMapper.updateHistoryShops(shopsEditModel);
+        if(base_result!=Constants.AFFECT_DB_ROWS_1){
+            resultMsg = new ResultMsg(Constants.OPERATOR_DB_ERROR,"update base error",null);
+        }
+        if(history_result!=Constants.AFFECT_DB_ROWS_1){
+            resultMsg = new ResultMsg(Constants.OPERATOR_DB_ERROR,"update history error",null);
+        }
+        return new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"edit success",null);
     }
 }

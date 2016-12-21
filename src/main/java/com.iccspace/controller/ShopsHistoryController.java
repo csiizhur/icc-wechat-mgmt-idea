@@ -1,6 +1,7 @@
 package com.iccspace.controller;
 
-import com.iccspace.controller.model.ShopsHistoryRequest;
+import com.iccspace.controller.model.ShopsEditModel;
+import com.iccspace.controller.model.ShopsListRequest;
 import com.iccspace.service.ShopsHistoryService;
 import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
@@ -29,13 +30,13 @@ public class ShopsHistoryController {
     @RequestMapping(method = RequestMethod.GET,value = "cuzuList" ,produces = "application/json;charset=UTF-8")
     public Object cuzuShopsList(String estatesType){
         ResultMsg resultMsg;
-        ShopsHistoryRequest shopsHistoryRequest = new ShopsHistoryRequest();
-        shopsHistoryRequest.setReleaseType(1);
+        ShopsListRequest shopsListRequest = new ShopsListRequest();
+        shopsListRequest.setReleaseType(1);
 
         if(!StringUtils.isEmpty(estatesType)){
-            shopsHistoryRequest.setEstatesType(estatesType);
+            shopsListRequest.setEstatesType(estatesType);
         }
-        resultMsg = shopsHistoryService.shopsList(shopsHistoryRequest);
+        resultMsg = shopsHistoryService.shopsList(shopsListRequest);
         return resultMsg;
     }
 
@@ -78,8 +79,15 @@ public class ShopsHistoryController {
         return resultMsg;
     }
 
-    @RequestMapping(method = RequestMethod.POST,value = "shopsEdit")
-    public Object editShops(String shopsId){
-
+    /**
+     * shops edit
+     * @param shopsEditModel
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST,value = "shopsEdit",produces = "application/json;charset=UTF-8")
+    public Object editShops(@RequestBody ShopsEditModel shopsEditModel){
+        ResultMsg resultMsg;
+        resultMsg = shopsHistoryService.shopsEdit(shopsEditModel);
+        return resultMsg;
     }
 }
