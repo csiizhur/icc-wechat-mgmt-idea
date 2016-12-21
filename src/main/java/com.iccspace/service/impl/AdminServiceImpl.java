@@ -1,6 +1,5 @@
 package com.iccspace.service.impl;
 
-import com.iccspace.controller.ControllerMsg;
 import com.iccspace.core.Constants;
 import com.iccspace.mapper.AdminMapper;
 import com.iccspace.service.AdminService;
@@ -42,7 +41,7 @@ public class AdminServiceImpl implements AdminService{
         }
         int rows=adminMapper.insertAdminAccount(admin);
         if(rows>Constants.AFFECT_DB_ROWS_0){
-            resultMsg=new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"",null);
+            resultMsg=new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"sign up account success",null);
             return resultMsg;
         }else{
             resultMsg =new ResultMsg(Constants.OPERATOR_DB_ERROR,Constants.OPERATOR_DB_ERROR_MESSAGE,null);
@@ -87,6 +86,31 @@ public class AdminServiceImpl implements AdminService{
             return resultMsg;
         }
     }
+
+    @Override
+    public ResultMsg editAdminPassword(AdminEdit adminEdit){
+        ResultMsg resultMsg=null;
+        Admin user=adminMapper.queryAdminInfoByMobileAndPassword(adminEdit.getMobile(),MyMD5Utils.getMD5(adminEdit.getOldPassword()+"salt"));
+        if(user==null){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_PASSWORD.getErrcode(),
+                    ResultStatusCode.INVALID_PASSWORD.getErrmsg(), null);
+            return resultMsg;
+        }
+        if(adminEdit.getOldPassword().equals(adminEdit.getNewPassword())){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_NEWPASSWORD.getErrcode(),ResultStatusCode.INVALID_NEWPASSWORD.getErrmsg(),null);
+        }
+        Admin adminUpdate=new Admin();
+        adminUpdate.setAdminId(user.getAdminId());
+        String md5Password=MyMD5Utils.getMD5(adminEdit.getNewPassword()+"salt");
+        adminUpdate.setPassword(md5Password);
+        adminUpdate.setMobile(user.getMobile());
+        int result=adminMapper.updateAdminPassword(adminUpdate);
+        if(result>=Constants.AFFECT_DB_ROWS_1){
+            resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(),null);
+        }
+        return resultMsg;
+    }
+
     @Override
     public ResultMsg restPassword(AdminEdit adminEdit) {
         //从redis获取带时间的vildCode
@@ -106,7 +130,7 @@ public class AdminServiceImpl implements AdminService{
             return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
         }
         Admin user= adminMapper.queryAdminInfoByMobile(adminEdit.getMobile());
-        user.setPassword(adminEdit.getNewPassword());
+        user.setPassword(MyMD5Utils.getMD5(adminEdit.getNewPassword()+"salt"));
         int result=adminMapper.updateAdminPassword(user);
 
         if(result> Constants.AFFECT_DB_ROWS_0){
@@ -118,8 +142,8 @@ public class AdminServiceImpl implements AdminService{
 
     @Override
     public ResultMsg adminLoginOut(Admin user){
-        stringRedisTemplate.opsForValue().getOperations().delete("c");
-        return new ResultMsg(222,"",null);
+        stringRedisTemplate.opsForValue().getOperations().delete(user.getMobile());
+        return new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),null);
     }
 
     //jpa方式缓存 mybatis无效

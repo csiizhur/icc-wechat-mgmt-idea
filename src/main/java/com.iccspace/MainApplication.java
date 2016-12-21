@@ -85,7 +85,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
 	@Override  
     public void run(String... args) throws Exception {  
         RestTemplate template = new RestTemplate();  
-        //Object greeting = template.getForObject("http://localhost:8896/oauth/token?name=323", Object.class);
+        //Object greeting = template.getForObject("http://localhost:8896/Api/oauth/token?name=323", Object.class);
         //System.err.println("restTemplate:GET--->"+greeting);
 
         HttpHeaders headers = new HttpHeaders();
@@ -98,7 +98,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
         params.put("password","111111");
         params.put("clientId","098f6bcd4621d373cade4e832627b4f6");
 
-        String url="http://127.0.0.1:8896/app/oauth/token";
+        String url="http://127.0.0.1:8896/Api/oauth/token";
 
         ObjectMapper mapper=new ObjectMapper();
         String jsonObj = mapper.writeValueAsString(params);

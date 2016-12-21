@@ -13,6 +13,8 @@ public interface AdminService {
     public ResultMsg signAdminAccount(Admin admin);
     //认证
     public ResultMsg adminOauthToken(Admin admin);
+    //edit pwd
+    public ResultMsg editAdminPassword(AdminEdit admin);
 
     public ResultMsg restPassword(AdminEdit adminEdit);
 

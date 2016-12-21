@@ -72,3 +72,11 @@
 2016-12-2111:34:59,514 DEBUG updateAdminPassword:145 ---- ==>  Preparing: update ADMIN set password=? where mobile=? and id=? 
 2016-12-2111:34:59,515 DEBUG updateAdminPassword:145 ---- ==> Parameters: 111111(String), 13916176592(String), easddgdfg(String)
 2016-12-2111:34:59,565 DEBUG updateAdminPassword:145 ---- <==    Updates: 1
+2016-12-2116:25:07,644 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2116:25:07,729 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2116:26:21,320 DEBUG queryShopsHistoryList:145 ---- ==>  Preparing: select sh.ID,sh.ESTATES_TYPE,s.ADDRESS,s.SHOP_SIZE,sh.RENT_FEE,sh.FLOOR,sh.CREATE_TIME,sh.MOBILEPHONE from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id where sh.release_type=? and sh.deleted=0 
+2016-12-2116:26:21,320 DEBUG queryShopsHistoryList:145 ---- ==> Parameters: 1(Integer)
+2016-12-2116:26:21,674 DEBUG queryShopsHistoryList:145 ---- <==      Total: 1920
+2016-12-2116:27:04,511 DEBUG queryShopsHistoryList:145 ---- ==>  Preparing: select sh.ID,sh.ESTATES_TYPE,s.ADDRESS,s.SHOP_SIZE,sh.RENT_FEE,sh.FLOOR,sh.CREATE_TIME,sh.MOBILEPHONE from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id where sh.release_type=? and sh.deleted=0 and sh.estates_type=? 
+2016-12-2116:27:04,512 DEBUG queryShopsHistoryList:145 ---- ==> Parameters: 1(Integer), 住宅底商(String)
+2016-12-2116:27:04,705 DEBUG queryShopsHistoryList:145 ---- <==      Total: 472

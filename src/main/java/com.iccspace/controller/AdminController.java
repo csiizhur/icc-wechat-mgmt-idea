@@ -44,7 +44,7 @@ public class AdminController {
      * @param admin
      * @return
      */
-    @RequestMapping(method = RequestMethod.POST,value="sign",produces = "application/json;charset=UTF-8")
+    @RequestMapping(method = RequestMethod.POST,value="signUpAccount",produces = "application/json;charset=UTF-8")
     public Object signAdminAccount(@RequestBody Admin admin){
         ResultMsg msg;
         String mobile=admin.getMobile();
@@ -92,25 +92,23 @@ public class AdminController {
      */
     @RequestMapping(method = RequestMethod.POST,value = "editPassword",produces = "application/json;charset=UTF-8")
     public Object editAdminPassword(@RequestBody AdminEdit admin){
-        ControllerMsg resultMsg=null;
-        Admin user=adminMapper.queryAdminInfoByMobileAndPassword(admin.getMobile(),MyMD5Utils.getMD5(admin.getOldPassword()+"salt"));
-        if(user==null){
-            resultMsg = new ControllerMsg(ResultStatusCode.INVALID_PASSWORD.getErrcode(),
-                    ResultStatusCode.INVALID_PASSWORD.getErrmsg(), null);
+        ResultMsg resultMsg;
+        String mobile=admin.getMobile();
+        String oldPwd=admin.getOldPassword();
+        String newPwd=admin.getNewPassword();
+        if(StringUtils.isEmpty(mobile)){
+            resultMsg = new ResultMsg(ResultStatusCode.MOBILE_ISNULL.getErrcode(),ResultStatusCode.MOBILE_ISNULL.getErrmsg(),null);
             return resultMsg;
         }
-        if(admin.getOldPassword().equals(admin.getNewPassword())){
-            resultMsg = new ControllerMsg(ResultStatusCode.INVALID_NEWPASSWORD.getErrcode(),ResultStatusCode.INVALID_NEWPASSWORD.getErrmsg(),null);
+        if(StringUtils.isEmpty(oldPwd)){
+            resultMsg = new ResultMsg(ResultStatusCode.OLDPASSWORD_ISNULL.getErrcode(),ResultStatusCode.OLDPASSWORD_ISNULL.getErrmsg(),null);
+            return resultMsg;
         }
-        Admin adminUpdate=new Admin();
-        adminUpdate.setAdminId(user.getAdminId());
-        String md5Password=MyMD5Utils.getMD5(admin.getNewPassword()+"salt");
-        adminUpdate.setPassword(md5Password);
-        adminUpdate.setMobile(user.getMobile());
-        int result=adminMapper.updateAdminPassword(adminUpdate);
-        if(result==1){
-            resultMsg = new ControllerMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(),null);
+        if(StringUtils.isEmpty(newPwd)){
+            resultMsg = new ResultMsg(ResultStatusCode.NEWPASSWORD_ISNULL.getErrcode(),ResultStatusCode.NEWPASSWORD_ISNULL.getErrmsg(),null);
+            return resultMsg;
         }
+        resultMsg=adminService.editAdminPassword(admin);
         return resultMsg;
     }
 
@@ -124,10 +122,10 @@ public class AdminController {
         Object o=redisService.queryRedisToken(adminEdit.getMobile());
         log.error("redis-->"+o);
         if(o==null){
-            return new ControllerMsg(ResultStatusCode.INVALID_REDIS_TOKEN.getErrcode(),ResultStatusCode.INVALID_REDIS_TOKEN.getErrmsg(),null);
+            return new ResultMsg(ResultStatusCode.INVALID_REDIS_TOKEN.getErrcode(),ResultStatusCode.INVALID_REDIS_TOKEN.getErrmsg(),null);
         }
         ResultMsg msg=adminService.restPassword(adminEdit);
-        return new ControllerMsg(msg.getErrcode(),msg.getErrmsg(),null);
+        return msg;
     }
 
     /**
@@ -137,6 +135,10 @@ public class AdminController {
      */
     @RequestMapping(method = RequestMethod.POST ,value="loginOut" ,produces = "application/json;charset=UTF-8")
     public Object adminLoginOut(@RequestBody Admin admin){
+        String tokenKey=admin.getMobile();
+        if(StringUtils.isEmpty(tokenKey)){
+            return new ResultMsg(ResultStatusCode.TOKENOFKEY_ISNULL.getErrcode(),ResultStatusCode.TOKENOFKEY_ISNULL.getErrmsg(),null);
+        }
         return adminService.adminLoginOut(admin);
     }
 
