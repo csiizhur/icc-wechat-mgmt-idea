@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * interceptor
  * Created by Administrator on 2016/12/22.
  */
-@Component
+//@Component
 public class AdminSecurityInterceptor implements HandlerInterceptor {
 
 	private Logger logger= org.slf4j.LoggerFactory.getLogger(this.getClass());

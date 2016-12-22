@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.iccspace.interceptor.AdminSecurityInterceptor;
 import com.iccspace.servlet.MyServlet;
 import org.apache.catalina.servlets.DefaultServlet;
 import org.mybatis.spring.annotation.MapperScan;
@@ -55,9 +56,9 @@ import org.springframework.web.util.WebAppRootListener;
 @SpringBootApplication
 @EnableConfigurationProperties(Audience.class)
 @ComponentScan("com.iccspace.controller,com.iccspace.service,com.iccspace.interceptor")
-
+//@Configuration
 @MapperScan("com.iccspace.mapper")
-public class MainApplication implements EmbeddedServletContainerCustomizer,CommandLineRunner {
+public class MainApplication extends WebMvcConfigurerAdapter implements EmbeddedServletContainerCustomizer,CommandLineRunner {
 	
 	private static Logger logger=LoggerFactory.getLogger(MainApplication.class);
 	
@@ -77,11 +78,12 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
 	}
 
 	public static void main(String[] args) {
+        //SpringApplication.run(MainApplication.class, args);
 		ConfigurableApplicationContext context=SpringApplication.run(MainApplication.class, args);
 		String[] names = context.getBeanDefinitionNames();  
         Arrays.sort(names);
         for (String string : names) {  
-        	logger.debug(string);
+        	logger.info(string);
         }
 	}
 
@@ -218,12 +220,22 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
     }
 
     /**
-     * 拦截器
+     * extends WebMvcConfigurerAdapter
+     * @param registry
+     */
+    /*@Override
+    public void addInterceptors(InterceptorRegistry registry){
+        registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/admin/putCache");
+        super.addInterceptors(registry);
+    }*/
+
+    /**
+     * inner class extends WebMvcConfigurerAdapter
      */
     /*@Configuration
     static class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
-        public void addInterceptors(InterceptorRegistry registry) {
+        *//*public void addInterceptors(InterceptorRegistry registry) {
             registry.addInterceptor(new HandlerInterceptorAdapter() {
 
                 @Override
@@ -233,7 +245,12 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
                     System.out.println("interceptor====");
                     return true;
                 }
-            }).addPathPatterns("/admin*//*");
+            }).addPathPatterns("/admin/**");
+        }*//*
+
+        public void addInterceptors(InterceptorRegistry registry){
+            logger.info("interceptor 检查 authorization");
+            registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/admin/putCache");
         }
     }*/
 }

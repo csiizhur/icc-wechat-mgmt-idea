@@ -12,13 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by Administrator on 2016/12/22.
+ * springApplication
  */
 @Configuration
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public void addInterceptors2(InterceptorRegistry registry) {
+    /*public void addInterceptors2(InterceptorRegistry registry) {
         registry.addInterceptor(new HandlerInterceptorAdapter() {
 
             @Override
@@ -28,7 +29,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
                 return true;
             }
         }).addPathPatterns("/Api/admin/putCache");
-    }
+    }*/
 
     /**
      * 将 interceptor注册进interceptor链
@@ -37,7 +38,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
         logger.info("interceptor 检查 authorization");
-        registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/admin/putCache");
         super.addInterceptors(registry);
     }
 }
