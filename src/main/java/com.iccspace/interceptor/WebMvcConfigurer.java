@@ -1,5 +1,7 @@
 package com.iccspace.interceptor;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -8,22 +10,34 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Created by Administrator on 2016/12/22.
+ */
 @Configuration
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
-  public void addInterceptors(InterceptorRegistry registry) {
-      registry.addInterceptor(new HandlerInterceptorAdapter() {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-          @Override
-          public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
+    public void addInterceptors2(InterceptorRegistry registry) {
+        registry.addInterceptor(new HandlerInterceptorAdapter() {
+
+            @Override
+            public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                                    Object handler) throws Exception {
-              System.out.println("interceptor====222");
-              return true;
-          }
-      }).addPathPatterns("/*");
-  }
 
-  public void addInterceptors2(InterceptorRegistry registry){
-      registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/shops/**");
-  }
+                return true;
+            }
+        }).addPathPatterns("/Api/admin/putCache");
+    }
+
+    /**
+     * 将 interceptor注册进interceptor链
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry){
+        logger.info("interceptor 检查 authorization");
+        registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/**");
+        super.addInterceptors(registry);
+    }
 }

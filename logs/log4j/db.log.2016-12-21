@@ -1,0 +1,82 @@
+2016-12-2109:44:55,482 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2109:44:55,563 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2109:48:10,577 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2109:48:10,608 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2109:52:30,462 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2109:52:30,493 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2109:53:10,927 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2109:53:10,927 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2109:53:10,959 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2109:55:08,343 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2109:55:08,358 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2109:55:12,212 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2109:55:12,212 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2109:55:12,244 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2110:45:56,664 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2110:45:56,849 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2110:55:41,926 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2110:55:41,954 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2110:56:32,362 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2110:56:32,363 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: null
+2016-12-2110:56:32,431 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 0
+2016-12-2110:57:07,038 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2110:57:07,039 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2110:57:07,090 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:01:01,027 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:01:01,171 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:01:19,543 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:01:19,543 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:01:19,579 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:08:41,397 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:08:41,398 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:08:41,414 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:08:41,416 DEBUG updateAdminPassword:145 ---- ==>  Preparing: update ADMIN set password=? where mobile=? and id=? 
+2016-12-2111:08:41,417 DEBUG updateAdminPassword:145 ---- ==> Parameters: 111111(String), 13916176592(String), easddgdfg(String)
+2016-12-2111:08:41,448 DEBUG updateAdminPassword:145 ---- <==    Updates: 1
+2016-12-2111:16:55,588 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:16:55,612 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:17:50,795 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:17:50,796 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:17:50,824 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:17:50,827 DEBUG updateAdminPassword:145 ---- ==>  Preparing: update ADMIN set password=? where mobile=? and id=? 
+2016-12-2111:17:50,827 DEBUG updateAdminPassword:145 ---- ==> Parameters: 111111(String), 13916176592(String), easddgdfg(String)
+2016-12-2111:17:50,874 DEBUG updateAdminPassword:145 ---- <==    Updates: 1
+2016-12-2111:21:10,035 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:21:10,062 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:23:43,639 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:23:43,665 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:25:36,583 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:25:36,610 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:28:06,677 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:28:06,703 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:31:01,641 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2111:31:01,693 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2111:32:18,475 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:32:18,476 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:32:18,507 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:32:24,481 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:32:24,481 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:32:24,502 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:32:35,352 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:32:35,352 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:32:35,384 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:33:58,828 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:33:58,829 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:33:58,853 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:34:05,327 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:34:05,327 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:34:05,349 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:34:59,494 DEBUG queryAdminInfoByMobile:145 ---- ==>  Preparing: select id,name,mobile,password from `wechat-server-db`.ADMIN where mobile=? 
+2016-12-2111:34:59,495 DEBUG queryAdminInfoByMobile:145 ---- ==> Parameters: 13916176592(String)
+2016-12-2111:34:59,512 DEBUG queryAdminInfoByMobile:145 ---- <==      Total: 1
+2016-12-2111:34:59,514 DEBUG updateAdminPassword:145 ---- ==>  Preparing: update ADMIN set password=? where mobile=? and id=? 
+2016-12-2111:34:59,515 DEBUG updateAdminPassword:145 ---- ==> Parameters: 111111(String), 13916176592(String), easddgdfg(String)
+2016-12-2111:34:59,565 DEBUG updateAdminPassword:145 ---- <==    Updates: 1
+2016-12-2116:25:07,644 DEBUG queryMgmtUserByUserName:145 ---- ==>  Preparing: select * from mgmt_user where username = ? 
+2016-12-2116:25:07,729 DEBUG queryMgmtUserByUserName:145 ---- ==> Parameters: 测试号(String)
+2016-12-2116:26:21,320 DEBUG queryShopsHistoryList:145 ---- ==>  Preparing: select sh.ID,sh.ESTATES_TYPE,s.ADDRESS,s.SHOP_SIZE,sh.RENT_FEE,sh.FLOOR,sh.CREATE_TIME,sh.MOBILEPHONE from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id where sh.release_type=? and sh.deleted=0 
+2016-12-2116:26:21,320 DEBUG queryShopsHistoryList:145 ---- ==> Parameters: 1(Integer)
+2016-12-2116:26:21,674 DEBUG queryShopsHistoryList:145 ---- <==      Total: 1920
+2016-12-2116:27:04,511 DEBUG queryShopsHistoryList:145 ---- ==>  Preparing: select sh.ID,sh.ESTATES_TYPE,s.ADDRESS,s.SHOP_SIZE,sh.RENT_FEE,sh.FLOOR,sh.CREATE_TIME,sh.MOBILEPHONE from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id where sh.release_type=? and sh.deleted=0 and sh.estates_type=? 
+2016-12-2116:27:04,512 DEBUG queryShopsHistoryList:145 ---- ==> Parameters: 1(Integer), 住宅底商(String)
+2016-12-2116:27:04,705 DEBUG queryShopsHistoryList:145 ---- <==      Total: 472

@@ -5,6 +5,8 @@ import java.util.*;
 import javax.annotation.PostConstruct;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.iccspace.servlet.MyServlet;
@@ -28,6 +30,7 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -39,13 +42,19 @@ import com.iccspace.token.Audience;
 import com.iccspace.token.HTTPBasicAuthorizeAttribute;
 import com.iccspace.token.HTTPBearerAuthorizeAttribute;
 import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import org.springframework.web.util.WebAppRootListener;
 
 @SpringBootApplication
 @EnableConfigurationProperties(Audience.class)
-@ComponentScan("com.iccspace.controller,com.iccspace.service")
+@ComponentScan("com.iccspace.controller,com.iccspace.service,com.iccspace.interceptor")
 
 @MapperScan("com.iccspace.mapper")
 public class MainApplication implements EmbeddedServletContainerCustomizer,CommandLineRunner {
@@ -142,6 +151,20 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
         return registrationBean;  
     }
 
+    @Bean
+    public FilterRegistrationBean corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.addAllowedOrigin("http://localhost:9000");
+        config.addAllowedOrigin("null");
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+        source.registerCorsConfiguration("/**", config); // CORS 配置对所有接口都有效
+        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
+        bean.setOrder(0);
+        return bean;
+    }
     /**
      * 注册servlet（Springmvc的DispatcherServlet）
      * @return
@@ -178,7 +201,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
         ServletRegistrationBean srb=new ServletRegistrationBean();
         //srb.setServlet(new StatViewServlet());druid的servlet
         srb.setServlet(new MyServlet());
-        srb.addUrlMappings("/druid/*");
+        srb.addUrlMappings("/druid*//*");
         return srb;
     }
 
@@ -194,4 +217,23 @@ public class MainApplication implements EmbeddedServletContainerCustomizer,Comma
         return filter;
     }
 
+    /**
+     * 拦截器
+     */
+    /*@Configuration
+    static class WebMvcConfigurer extends WebMvcConfigurerAdapter {
+
+        public void addInterceptors(InterceptorRegistry registry) {
+            registry.addInterceptor(new HandlerInterceptorAdapter() {
+
+                @Override
+                public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
+                                         Object handler) throws Exception {
+                    request.getContextPath();
+                    System.out.println("interceptor====");
+                    return true;
+                }
+            }).addPathPatterns("/admin*//*");
+        }
+    }*/
 }
