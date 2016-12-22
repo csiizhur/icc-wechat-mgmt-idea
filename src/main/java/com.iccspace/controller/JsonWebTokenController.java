@@ -1,12 +1,12 @@
 package com.iccspace.controller;
 
 
-import com.iccspace.vo.User;
+import com.iccspace.mapper.AdminMapper;
+import com.iccspace.vo.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.iccspace.mapper.MgmtUserMapper;
 import com.iccspace.token.AccessToken;
 import com.iccspace.token.Audience;
 import com.iccspace.token.JwtHelper;
@@ -25,7 +25,7 @@ import com.iccspace.token.ResultStatusCode;
 @RestController
 public class JsonWebTokenController {
 	@Autowired
-	private MgmtUserMapper userMapper;
+	private AdminMapper userMapper;
 
 	@Autowired
 	private Audience audienceEntity;
@@ -40,7 +40,7 @@ public class JsonWebTokenController {
 				return resultMsg;
 			}
 			// 验证用户名密码,用户名唯一
-			User user = userMapper.queryMgmtUserByUserName(loginPara.getUserName());
+			Admin user = userMapper.queryAdminInfoByMobile(loginPara.getUserName());
 			if (user == null) {
 				resultMsg = new ResultMsg(ResultStatusCode.INVALID_PASSWORD.getErrcode(),
 						ResultStatusCode.INVALID_PASSWORD.getErrmsg(), null);
@@ -56,7 +56,7 @@ public class JsonWebTokenController {
 			}
 
 			// 拼装accessToken
-			String accessToken = JwtHelper.createJWT(loginPara.getUserName(), String.valueOf(user.getUserId()),
+			String accessToken = JwtHelper.createJWT(loginPara.getUserName(), String.valueOf(user.getAdminId()),
 					"userRole", audienceEntity.getClientId(), audienceEntity.getName(),
 					audienceEntity.getExpiresSecond() * 1000, audienceEntity.getBase64Secret());
 

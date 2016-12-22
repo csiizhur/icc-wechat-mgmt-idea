@@ -1,11 +1,9 @@
 package com.iccspace.mapper;
 
+import com.iccspace.controller.model.ShopsAddModel;
 import com.iccspace.controller.model.ShopsEditModel;
 import com.iccspace.controller.model.ShopsListRequest;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 import java.util.Map;
@@ -74,4 +72,12 @@ public interface ShopsHistoryMapper {
             "address=#{shopsAddress}" +
             "where historyid=#{shopsId}")
     public int updateBaseShops(ShopsEditModel shopsEditModel);
+
+    @Insert("insert SHOPS_HISTORY(id,BASE_SHOPSID,estates_type,create_time,mobilephone,floor,rent_fee,release_type) " +
+            "values(#{shopsId},#{baseShopsId},#{estatesType},#{releaseDate},#{mobilePhone},#{floor},#{rentFee},#{releaseType})")
+    public int insertHistoryShops(ShopsAddModel shopsAddModel);
+
+    @Insert("insert SHOPS(id,shop_size,address,historyid) " +
+            "values(#{baseShopsId},#{shopSize},#{shopsAddress},#{shopsId})")
+    public int insertBaseShops(ShopsAddModel shopsAddModel);
 }

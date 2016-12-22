@@ -584,7 +584,7 @@
 2016-12-19 18:33:05,484 DEBUG PathMatchingResourcePatternResolver:773 - Searching directory [F:\company\IdeaProjects\icc-wechat-mgmt-idea\target\classes\com\iccspace\mapper] for files matching pattern [F:/company/IdeaProjects/icc-wechat-mgmt-idea/target/classes/com/iccspace/mapper/**/*.class]
 2016-12-19 18:33:05,484 DEBUG PathMatchingResourcePatternResolver:483 - Resolved location pattern [classpath*:com/iccspace/mapper/**/*.class] to resources [file [F:\company\IdeaProjects\icc-wechat-mgmt-idea\target\classes\com\iccspace\mapper\MgmtUserMapper.class]]
 2016-12-19 18:33:05,495 DEBUG ClassPathMapperScanner:286 - Identified candidate component class: file [F:\company\IdeaProjects\icc-wechat-mgmt-idea\target\classes\com\iccspace\mapper\MgmtUserMapper.class]
-2016-12-19 18:33:05,495 DEBUG ClassPathMapperScanner:181 - Creating MapperFactoryBean with name 'mgmtUserMapper' and 'com.iccspace.mapper.MgmtUserMapper' mapperInterface
+2016-12-19 18:33:05,495 DEBUG ClassPathMapperScanner:181 - Creating MapperFactoryBean with name 'mgmtUserMapper' and 'com.iccspace.mapper.RentUsersMapper' mapperInterface
 2016-12-19 18:33:05,495 DEBUG ClassPathMapperScanner:217 - Enabling autowire by type for MapperFactoryBean with name 'mgmtUserMapper'.
 2016-12-19 18:33:05,495 DEBUG ConfigurationClassBeanDefinitionReader:164 - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration'
 2016-12-19 18:33:05,500 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry'
@@ -2095,11 +2095,11 @@
 2016-12-19 18:33:08,506 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'jsonWebTokenController'
 2016-12-19 18:33:08,507 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'jsonWebTokenController'
 2016-12-19 18:33:08,507 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
-2016-12-19 18:33:08,508 DEBUG InjectionMetadata:72 - Registered injected element on class [com.iccspace.controller.JsonWebTokenController]: AutowiredFieldElement for private com.iccspace.mapper.MgmtUserMapper com.iccspace.controller.JsonWebTokenController.userMapper
+2016-12-19 18:33:08,508 DEBUG InjectionMetadata:72 - Registered injected element on class [com.iccspace.controller.JsonWebTokenController]: AutowiredFieldElement for private com.iccspace.mapper.RentUsersMapper com.iccspace.controller.JsonWebTokenController.userMapper
 2016-12-19 18:33:08,508 DEBUG InjectionMetadata:72 - Registered injected element on class [com.iccspace.controller.JsonWebTokenController]: AutowiredFieldElement for private com.iccspace.token.Audience com.iccspace.controller.JsonWebTokenController.audienceEntity
 2016-12-19 18:33:08,508 DEBUG DefaultListableBeanFactory:537 - Eagerly caching bean 'jsonWebTokenController' to allow for resolving potential circular references
 2016-12-19 18:33:08,509 DEBUG CachedIntrospectionResults:198 - Not strongly caching class [com.iccspace.controller.JsonWebTokenController] because it is not cache-safe
-2016-12-19 18:33:08,509 DEBUG InjectionMetadata:86 - Processing injected element of bean 'jsonWebTokenController': AutowiredFieldElement for private com.iccspace.mapper.MgmtUserMapper com.iccspace.controller.JsonWebTokenController.userMapper
+2016-12-19 18:33:08,509 DEBUG InjectionMetadata:86 - Processing injected element of bean 'jsonWebTokenController': AutowiredFieldElement for private com.iccspace.mapper.RentUsersMapper com.iccspace.controller.JsonWebTokenController.userMapper
 2016-12-19 18:33:08,510 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'mgmtUserMapper'
 2016-12-19 18:33:08,510 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'mgmtUserMapper'
 2016-12-19 18:33:08,510 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
@@ -2280,10 +2280,10 @@
 2016-12-19 18:33:08,899 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'mgmtUserServiceImpl'
 2016-12-19 18:33:08,899 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'mgmtUserServiceImpl'
 2016-12-19 18:33:08,899 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
-2016-12-19 18:33:08,900 DEBUG InjectionMetadata:72 - Registered injected element on class [com.iccspace.service.impl.MgmtUserServiceImpl]: AutowiredFieldElement for private com.iccspace.mapper.MgmtUserMapper com.iccspace.service.impl.MgmtUserServiceImpl.userMapper
+2016-12-19 18:33:08,900 DEBUG InjectionMetadata:72 - Registered injected element on class [com.iccspace.service.impl.MgmtUserServiceImpl]: AutowiredFieldElement for private com.iccspace.mapper.RentUsersMapper com.iccspace.service.impl.MgmtUserServiceImpl.userMapper
 2016-12-19 18:33:08,900 DEBUG DefaultListableBeanFactory:537 - Eagerly caching bean 'mgmtUserServiceImpl' to allow for resolving potential circular references
 2016-12-19 18:33:08,902 DEBUG CachedIntrospectionResults:198 - Not strongly caching class [com.iccspace.service.impl.MgmtUserServiceImpl] because it is not cache-safe
-2016-12-19 18:33:08,902 DEBUG InjectionMetadata:86 - Processing injected element of bean 'mgmtUserServiceImpl': AutowiredFieldElement for private com.iccspace.mapper.MgmtUserMapper com.iccspace.service.impl.MgmtUserServiceImpl.userMapper
+2016-12-19 18:33:08,902 DEBUG InjectionMetadata:86 - Processing injected element of bean 'mgmtUserServiceImpl': AutowiredFieldElement for private com.iccspace.mapper.RentUsersMapper com.iccspace.service.impl.MgmtUserServiceImpl.userMapper
 2016-12-19 18:33:08,902 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'mgmtUserMapper'
 2016-12-19 18:33:08,902 DEBUG AutowiredAnnotationBeanPostProcessor:539 - Autowiring by type from bean name 'mgmtUserServiceImpl' to bean named 'mgmtUserMapper'
 2016-12-19 18:33:08,902 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'

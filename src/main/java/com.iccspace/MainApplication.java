@@ -3,6 +3,7 @@ package com.iccspace;
 import java.util.*;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +25,7 @@ import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletCont
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cache.annotation.EnableCaching;
@@ -48,6 +50,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -152,7 +155,14 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
         registrationBean.setUrlPatterns(urlPatterns);
         return registrationBean;  
     }
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
 
+        registry.addMapping("/**").allowedHeaders("*")
+                .allowedMethods("*")
+                .allowedOrigins("*");
+
+    }
     @Bean
     public FilterRegistrationBean corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -252,5 +262,15 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
             logger.info("interceptor 检查 authorization");
             registry.addInterceptor(new AdminSecurityInterceptor()).addPathPatterns("/admin/putCache");
         }
+    }*/
+
+    //将MultipartConfigElement 注册到DispatcherServlet
+    /*@Bean
+    public MultipartConfigElement multipartConfigElement(){
+        MultipartConfigFactory multipartConfigFactory=new MultipartConfigFactory();
+        multipartConfigFactory.setMaxFileSize(10*1024*1024);
+        MultipartConfigElement multipartConfigElement=new MultipartConfigElement();
+        multipartConfigFactory.
+        return multipartConfigFactory;
     }*/
 }

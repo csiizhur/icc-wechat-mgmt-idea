@@ -362,3 +362,5 @@ Caused by: org.springframework.web.client.HttpClientErrorException: 401 null
  ERROR MainApplication:134 - Error Message!
 2016-12-22 13:55:22,923 ERROR MainApplication:134 - Error Message!
  ERROR MainApplication:134 - Error Message!
+2016-12-22 17:37:57,833 ERROR MainApplication:137 - Error Message!
+ ERROR MainApplication:137 - Error Message!
