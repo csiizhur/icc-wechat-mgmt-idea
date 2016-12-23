@@ -52,13 +52,14 @@ import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import org.springframework.web.util.WebAppRootListener;
 
 @SpringBootApplication
 @EnableConfigurationProperties(Audience.class)
-@ComponentScan("com.iccspace.controller,com.iccspace.service,com.iccspace.interceptor")
+@ComponentScan("com.iccspace.controller,com.iccspace.service,com.iccspace.interceptor,com.iccspace.config")
 //@Configuration
 @MapperScan("com.iccspace.mapper")
 public class MainApplication extends WebMvcConfigurerAdapter implements EmbeddedServletContainerCustomizer,CommandLineRunner {
@@ -109,10 +110,11 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
 
         Map<String,String> params=new HashMap<>();
         params.put("userName","测试号");
+        params.put("mobile","13916176592");
         params.put("password","111111");
         params.put("clientId","098f6bcd4621d373cade4e832627b4f6");
 
-        String url="http://127.0.0.1:8896/Api/oauth/token";
+        String url="http://127.0.0.1:8896/Api/admin/oauth/token";
 
         ObjectMapper mapper=new ObjectMapper();
         String jsonObj = mapper.writeValueAsString(params);
@@ -268,12 +270,26 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
     }*/
 
     //将MultipartConfigElement 注册到DispatcherServlet
-    /*@Bean
+    @Bean
     public MultipartConfigElement multipartConfigElement(){
         MultipartConfigFactory multipartConfigFactory=new MultipartConfigFactory();
-        multipartConfigFactory.setMaxFileSize(10*1024*1024);
-        MultipartConfigElement multipartConfigElement=new MultipartConfigElement();
-        multipartConfigFactory.
-        return multipartConfigFactory;
-    }*/
+        multipartConfigFactory.setMaxFileSize("128KB");
+        multipartConfigFactory.setMaxRequestSize("256KB");
+        multipartConfigFactory.setLocation("D://upload//");
+
+        return multipartConfigFactory.createMultipartConfig();
+    }
+
+    /**
+     * static resource
+     * urlpattern 去掉contextpath
+     * @param resourceHandlerRegistry
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry){
+        resourceHandlerRegistry.addResourceHandler("/logs/**").addResourceLocations("classpath:/logs/log4j/");
+        resourceHandlerRegistry.addResourceHandler("/photo/**").addResourceLocations("file:D:/upload/photo/**");
+        resourceHandlerRegistry.addResourceHandler("/photo/**").addResourceLocations("file:/mnt/iccspace/upload/mgmt_photo/");
+        super.addResourceHandlers(resourceHandlerRegistry);
+    }
 }

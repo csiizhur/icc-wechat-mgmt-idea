@@ -2,6 +2,8 @@ package com.iccspace.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.github.pagehelper.Constant;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.iccspace.controller.model.AuditAddModel;
 import com.iccspace.controller.model.ShopsAddModel;
 import com.iccspace.controller.model.ShopsEditModel;
@@ -35,9 +37,10 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
     @Override
     public ResultMsg shopsList(ShopsListRequest shopsListRequest) {
 
+        PageHelper.startPage(1,20);
         List<Map<String,Object>> list = shopsHistoryMapper.queryShopsHistoryList(shopsListRequest);
-
-        ResultMsg resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"shops list", JSONArray.toJSON(list));
+        PageInfo page= new PageInfo(list);
+        ResultMsg resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"shops list", JSONArray.toJSON(page));
 
         return resultMsg;
     }

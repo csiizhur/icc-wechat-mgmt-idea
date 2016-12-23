@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
+import java.io.*;
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -126,6 +128,10 @@ public class ShopsHistoryController {
     }
 
     /**
+     * "resultdata": {
+     *      "local_url": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\tomcat-docbase.2284832876424474442.8896\\upload/1481794283869.jpeg",
+     *      "url": "/Api/upload/1481794283869.jpeg"
+     *  }
      * photos upload
      * @param multipartFile
      * @param request
@@ -158,11 +164,84 @@ public class ShopsHistoryController {
             e.printStackTrace();
         }
         Map map = new HashMap();
+        map.put("local_url",f);
         map.put("url",request.getContextPath()+"/upload/"+fileName);
         resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),"",map);
         return resultMsg;
     }
 
+    /**
+     * 单个文件上传到项目根路径下
+     * @param multipartFile
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST,value = "photosUpload2",consumes = "multipart/form-data")
+    public Object uploadPhotos2(MultipartFile multipartFile){
+        ResultMsg resultMsg;
+        if(multipartFile.isEmpty()){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_UPLOAD_FILE.getErrcode(),ResultStatusCode.INVALID_UPLOAD_FILE.getErrmsg(),null);
+            return  resultMsg;
+        }
+        try{
+            File file = new File(multipartFile.getOriginalFilename());
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            BufferedOutputStream bos = new BufferedOutputStream(fileOutputStream);
+
+            bos.write(multipartFile.getBytes());
+            bos.flush();
+            bos.close();
+        }catch(FileNotFoundException e){
+            resultMsg = new ResultMsg(Constants.OPERATOR_FILE_ERROR,Constants.OPERATOR_FILE_ERROR_MESSAGE,null);
+            return resultMsg;
+        }catch(IOException e){
+            resultMsg = new ResultMsg(Constants.OPERATOR_FILE_ERROR,Constants.OPERATOR_FILE_ERROR_MESSAGE,null);
+            return resultMsg;
+        }
+        Map<String,Object> map = new HashMap<String,Object>();
+        //map.put("url", file);
+        return new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"",map);
+    }
+
+    /**
+     * 批量上传到工程根路径下
+     * @param httpServletRequest
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST,value = "batch/photosUpload",consumes = "multipart/form-data")
+    public Object batchUploadPhotos(HttpServletRequest httpServletRequest){
+
+        ResultMsg resultMsg;
+
+        List<MultipartFile> files = ((MultipartHttpServletRequest)httpServletRequest).getFiles("file");
+
+        MultipartFile multipartFile = null;
+        BufferedOutputStream bufferedOutputStream = null;
+        for(int i=0;i<files.size();i++){
+            multipartFile = files.get(i);
+            if(multipartFile.isEmpty()){
+                resultMsg = new ResultMsg(ResultStatusCode.INVALID_UPLOAD_FILE.getErrcode(),ResultStatusCode.INVALID_UPLOAD_FILE.getErrmsg(),null);
+                return resultMsg;
+            }
+            try{
+                byte[] bytes = multipartFile.getBytes();
+
+                bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(new File(multipartFile.getOriginalFilename())));
+
+                bufferedOutputStream.write(bytes);
+                bufferedOutputStream.flush();
+                bufferedOutputStream.close();
+            }catch(FileNotFoundException e){
+                resultMsg = new ResultMsg(Constants.OPERATOR_FILE_ERROR,Constants.OPERATOR_FILE_ERROR_MESSAGE,null);
+                return resultMsg;
+            }catch(IOException e){
+                resultMsg = new ResultMsg(Constants.OPERATOR_FILE_ERROR,Constants.OPERATOR_FILE_ERROR_MESSAGE,null);
+                return resultMsg;
+            }
+        }
+        resultMsg = new ResultMsg(Constants.OPERATOR_FILE_SUCCESS,"",null);
+        return resultMsg;
+
+    }
     /**
      * shops add
      * @param shopsAddModel

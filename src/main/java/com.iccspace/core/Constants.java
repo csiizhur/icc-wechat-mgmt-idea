@@ -43,4 +43,8 @@ public class Constants {
 	public static final int QIU_ZU=2;
 	public static final int HE_ZU=3;
 	public static final int ZHUAN_ZU=4;
+
+	public static final int OPERATOR_FILE_SUCCESS=0;
+	public static final int OPERATOR_FILE_ERROR=30001;
+	public static final String OPERATOR_FILE_ERROR_MESSAGE="operator file fail";
 }
