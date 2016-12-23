@@ -32,4 +32,15 @@ public class Constants {
 	public static final String OPERATOR_DB_SUCCESS_MESSAGE="";
 	public static final int OPERATOR_DB_ERROR=10001;
 	public static final String OPERATOR_DB_ERROR_MESSAGE="operator db fail";
+
+	public static final int OPERATOR_REDIS_SUCCESS=0;
+	public static final int OPERATOR_REDIS_ERROR=20001;
+	public static final String OPERATOR_REDIS_ERROR_MESSAGE="operator redis fail";
+
+	public static final String PWD_SALT="salt";
+
+	public static final int CHU_ZU=1;
+	public static final int QIU_ZU=2;
+	public static final int HE_ZU=3;
+	public static final int ZHUAN_ZU=4;
 }

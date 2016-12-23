@@ -10,7 +10,7 @@ import java.util.Map;
 public interface RentUsersMapper {
 	@Select("select RENT_ID,NICKNAME,EXPECTSHOPSIZE_MIN,EXPECTSHOPSIZE_MAX,EXPECTRENTFEE_MIN,EXPECTRENTFEE_MAX,MOBILEPHONE," +
 			"BUSINESSTYPE,CREATE_TIME from RENT_SHOPS rs left join USER u on u.id=rs.userid" +
-			"where RELEASE_TYPE=4 and DELETED=0")
+			"where RELEASE_TYPE=2 and DELETED=0")
 	@Results({
 			//@Result(id = true, column = "id", property = "userId"),
 			@Result(column = "RENT_ID", property = "rentId"),

@@ -151,7 +151,9 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
         HTTPBearerAuthorizeAttribute httpBearerFilter = new HTTPBearerAuthorizeAttribute();  
         registrationBean.setFilter(httpBearerFilter);  
         List<String> urlPatterns = new ArrayList<String>();
-        urlPatterns.add("/admin/restPassword");
+        urlPatterns.add("/admin/editPassword");
+        urlPatterns.add("/shops/*");
+        urlPatterns.add("/rents/*");
         registrationBean.setUrlPatterns(urlPatterns);
         return registrationBean;  
     }
@@ -169,6 +171,7 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         config.addAllowedOrigin("http://localhost:9000");
+        config.addAllowedOrigin("*");
         config.addAllowedOrigin("null");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
@@ -213,7 +216,7 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
         ServletRegistrationBean srb=new ServletRegistrationBean();
         //srb.setServlet(new StatViewServlet());druid的servlet
         srb.setServlet(new MyServlet());
-        srb.addUrlMappings("/druid*//*");
+        srb.addUrlMappings("/druid/*");
         return srb;
     }
 

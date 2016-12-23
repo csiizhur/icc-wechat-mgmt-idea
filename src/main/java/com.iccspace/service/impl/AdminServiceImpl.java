@@ -34,11 +34,14 @@ public class AdminServiceImpl implements AdminService{
     public ResultMsg signAdminAccount(Admin admin){
         ResultMsg resultMsg;
         String mobile = admin.getMobile();
+        String pwd = admin.getPassword();
         Admin user=adminMapper.queryAdminInfoByMobile(mobile);
         if(user!=null){
-            resultMsg=new ResultMsg(ResultStatusCode.MOBILE_ISSIGN.getErrcode(),
-                    ResultStatusCode.MOBILE_ISSIGN.getErrmsg(),null);
+            resultMsg=new ResultMsg(ResultStatusCode.INVALID_MOBILE_ISSIGN.getErrcode(),
+                    ResultStatusCode.INVALID_MOBILE_ISSIGN.getErrmsg(),null);
+            return resultMsg;
         }
+        admin.setPassword(MyMD5Utils.getMD5(pwd+Constants.PWD_SALT));
         int rows=adminMapper.insertAdminAccount(admin);
         if(rows == Constants.AFFECT_DB_ROWS_1){
             resultMsg=new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"sign up account success",null);
@@ -60,7 +63,7 @@ public class AdminServiceImpl implements AdminService{
                         ResultStatusCode.INVALID_PASSWORD.getErrmsg(), null);
                 return resultMsg;
             } else {
-                String md5Password = MyMD5Utils.getMD5(admin.getPassword() + "salt");
+                String md5Password = MyMD5Utils.getMD5(admin.getPassword() + Constants.PWD_SALT);
 
                 if (md5Password.compareTo(user.getPassword().toString()) != 0) {
                     resultMsg = new ResultMsg(ResultStatusCode.INVALID_PASSWORD.getErrcode(),
@@ -101,7 +104,7 @@ public class AdminServiceImpl implements AdminService{
         }
         Admin adminUpdate=new Admin();
         adminUpdate.setAdminId(user.getAdminId());
-        String md5Password=MyMD5Utils.getMD5(adminEdit.getNewPassword()+"salt");
+        String md5Password=MyMD5Utils.getMD5(adminEdit.getNewPassword()+ Constants.PWD_SALT);
         adminUpdate.setPassword(md5Password);
         adminUpdate.setMobile(user.getMobile());
         int result=adminMapper.updateAdminPassword(adminUpdate);
@@ -119,18 +122,24 @@ public class AdminServiceImpl implements AdminService{
         c.getClientName();
         //java.lang.IllegalArgumentException: non null key required
         if(StringUtils.isEmpty(adminEdit.getVaildCode())){
-            return new ResultMsg(ResultStatusCode.VAILDCODE_ISNULL.getErrcode(),ResultStatusCode.VAILDCODE_ISNULL.getErrmsg(),null);
+            return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
         }
-        String redisVaildCode=stringRedisTemplate.opsForValue().get(adminEdit.getVaildCode());
-
+        if(StringUtils.isEmpty(adminEdit.getMobile())){
+            return new ResultMsg(ResultStatusCode.INVALID_REDISKEY_ISNULL.getErrcode(),ResultStatusCode.INVALID_REDISKEY_ISNULL.getErrmsg(),null);
+        }
+        if(StringUtils.isEmpty(adminEdit.getAdminId())){
+            return new ResultMsg(ResultStatusCode.INVALID_ADMINID.getErrcode(),ResultStatusCode.INVALID_ADMINID.getErrmsg(),null);
+        }
+        //String redisVaildCode=stringRedisTemplate.opsForValue().get(adminEdit.getVaildCode());
+        String redisVaildCode = stringRedisTemplate.opsForValue().get(adminEdit.getAdminId()+"_"+adminEdit.getMobile());
         if(StringUtils.isEmpty(redisVaildCode)){
-            return new ResultMsg(ResultStatusCode.REDIS_VAILDCODE.getErrcode(),ResultStatusCode.REDIS_VAILDCODE.getErrmsg(),null);
+            return new ResultMsg(ResultStatusCode.INVALID_REDIS_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_REDIS_VAILDCODE.getErrmsg(),null);
         }
         if(!adminEdit.getVaildCode().equals(redisVaildCode)){
             return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
         }
         Admin user= adminMapper.queryAdminInfoByMobile(adminEdit.getMobile());
-        user.setPassword(MyMD5Utils.getMD5(adminEdit.getNewPassword()+"salt"));
+        user.setPassword(MyMD5Utils.getMD5(adminEdit.getNewPassword()+ Constants.PWD_SALT));
         int result=adminMapper.updateAdminPassword(user);
 
         if(result == Constants.AFFECT_DB_ROWS_1){
@@ -143,6 +152,7 @@ public class AdminServiceImpl implements AdminService{
     @Override
     public ResultMsg adminLoginOut(Admin user){
         stringRedisTemplate.opsForValue().getOperations().delete(user.getMobile());
+        //api 删除 Authorization
         return new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),null);
     }
 

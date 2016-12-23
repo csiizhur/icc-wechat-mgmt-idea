@@ -11,6 +11,7 @@ import com.iccspace.mapper.AuditMapper;
 import com.iccspace.mapper.ShopsHistoryMapper;
 import com.iccspace.service.ShopsHistoryService;
 import com.iccspace.token.ResultMsg;
+import com.iccspace.token.ResultStatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -80,7 +81,7 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
     @Override
     public ResultMsg photosUpload(MultipartFile multipartFile){
         ResultMsg resultMsg;
-        return new ResultMsg(12,"",null);
+        return new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),null);
     }
 
     @Override

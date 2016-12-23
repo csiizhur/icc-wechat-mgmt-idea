@@ -1,5 +1,6 @@
 package com.iccspace.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.iccspace.mapper.AdminMapper;
 import com.iccspace.service.AdminService;
 import com.iccspace.service.RedisService;
@@ -50,13 +51,13 @@ public class AdminController {
         String mobile=admin.getMobile();
         String pwd=admin.getPassword();
         if(StringUtils.isEmpty(mobile)){
-            msg=new ResultMsg(ResultStatusCode.MOBILE_ISNULL.getErrcode(),
-                    ResultStatusCode.MOBILE_ISNULL.getErrmsg(),null);
+            msg=new ResultMsg(ResultStatusCode.INVALID_MOBILE.getErrcode(),
+                    ResultStatusCode.INVALID_MOBILE.getErrmsg(),null);
             return msg;
         }
         if(StringUtils.isEmpty(pwd)){
-            msg=new ResultMsg(ResultStatusCode.PASSWORD_ISNULL.getErrcode(),
-                    ResultStatusCode.PASSWORD_ISNULL.getErrmsg(),null);
+            msg=new ResultMsg(ResultStatusCode.INVALID_PASSWORD_ISNULL.getErrcode(),
+                    ResultStatusCode.INVALID_PASSWORD_ISNULL.getErrmsg(),null);
             return msg;
         }
         msg=adminService.signAdminAccount(admin);
@@ -73,11 +74,11 @@ public class AdminController {
         String mobile=admin.getMobile();
         String password=admin.getPassword();
         if(StringUtils.isEmpty(mobile)){
-            msg= new ResultMsg(ResultStatusCode.MOBILE_ISNULL.getErrcode(),ResultStatusCode.MOBILE_ISNULL.getErrmsg(),null);
+            msg= new ResultMsg(ResultStatusCode.INVALID_MOBILE.getErrcode(),ResultStatusCode.INVALID_MOBILE.getErrmsg(),null);
             return msg;
         }
         if(StringUtils.isEmpty(password)){
-            msg= new ResultMsg(ResultStatusCode.PASSWORD_ISNULL.getErrcode(),ResultStatusCode.PASSWORD_ISNULL.getErrmsg(),null);
+            msg= new ResultMsg(ResultStatusCode.INVALID_PASSWORD_ISNULL.getErrcode(),ResultStatusCode.INVALID_PASSWORD_ISNULL.getErrmsg(),null);
             return msg;
         }
         msg=adminService.adminOauthToken(admin);
@@ -97,18 +98,38 @@ public class AdminController {
         String oldPwd=admin.getOldPassword();
         String newPwd=admin.getNewPassword();
         if(StringUtils.isEmpty(mobile)){
-            resultMsg = new ResultMsg(ResultStatusCode.MOBILE_ISNULL.getErrcode(),ResultStatusCode.MOBILE_ISNULL.getErrmsg(),null);
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_MOBILE.getErrcode(),ResultStatusCode.INVALID_MOBILE.getErrmsg(),null);
             return resultMsg;
         }
         if(StringUtils.isEmpty(oldPwd)){
-            resultMsg = new ResultMsg(ResultStatusCode.OLDPASSWORD_ISNULL.getErrcode(),ResultStatusCode.OLDPASSWORD_ISNULL.getErrmsg(),null);
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_OLDPASSWORD.getErrcode(),ResultStatusCode.INVALID_OLDPASSWORD.getErrmsg(),null);
             return resultMsg;
         }
         if(StringUtils.isEmpty(newPwd)){
-            resultMsg = new ResultMsg(ResultStatusCode.NEWPASSWORD_ISNULL.getErrcode(),ResultStatusCode.NEWPASSWORD_ISNULL.getErrmsg(),null);
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_NEWPASSWORD.getErrcode(),ResultStatusCode.INVALID_NEWPASSWORD.getErrmsg(),null);
             return resultMsg;
         }
         resultMsg=adminService.editAdminPassword(admin);
+        return resultMsg;
+    }
+
+    /**
+     * rest password need send vaild_code
+     * @param adminId
+     * @param mobile
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST,value = "sendVaildCode",produces = "application/json;charset=UTF-8")
+    public Object sendVaildCode(String adminId,String mobile){
+        ResultMsg resultMsg;
+        //模拟的校验码
+        String vaild_code="is_code";
+        //redis vaildcode {adminId_mobile:vaild_code}
+        stringRedisTemplate.opsForValue().set(adminId+"_"+mobile,vaild_code,60,TimeUnit.SECONDS);
+        JSONObject json = new JSONObject();
+        json.put("vaildCode",vaild_code);
+        json.put("expire",120);
+        resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),json);
         return resultMsg;
     }
 
@@ -121,6 +142,7 @@ public class AdminController {
     public Object restAdminPassword(@RequestBody AdminEdit adminEdit){
         Object o=redisService.queryRedisToken(adminEdit.getMobile());
         log.error("redis-->"+o);
+        //redis token {mobile:access_token}
         if(o==null){
             return new ResultMsg(ResultStatusCode.INVALID_REDIS_TOKEN.getErrcode(),ResultStatusCode.INVALID_REDIS_TOKEN.getErrmsg(),null);
         }
@@ -137,7 +159,7 @@ public class AdminController {
     public Object adminLoginOut(@RequestBody Admin admin){
         String tokenKey=admin.getMobile();
         if(StringUtils.isEmpty(tokenKey)){
-            return new ResultMsg(ResultStatusCode.TOKENOFKEY_ISNULL.getErrcode(),ResultStatusCode.TOKENOFKEY_ISNULL.getErrmsg(),null);
+            return new ResultMsg(ResultStatusCode.INVALID_TOKENOFKEY_ISNULL.getErrcode(),ResultStatusCode.INVALID_TOKENOFKEY_ISNULL.getErrmsg(),null);
         }
         return adminService.adminLoginOut(admin);
     }

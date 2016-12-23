@@ -7,19 +7,35 @@ public enum ResultStatusCode {
 	INVALID_CAPTCHA(30004, "Invalid captcha or captcha overdue"),
 	INVALID_TOKEN(30005, "Invalid token"),
 	PERMISSION_DENIED(30006,"asdfgsf"),
-    MOBILE_ISNULL(30007,"Mobile is null"),
-    PASSWORD_ISNULL(30008,"Password is null"),
-    OLDPASSWORD_ISNULL(30008,"OldPassword is null"),
-    NEWPASSWORD_ISNULL(30008,"NewPassword is null"),
-    TOKENOFKEY_ISNULL(30008,"key of token is null"),
-    REDISKEY_ISNULL(30008,"redis key is null"),
-    MOBILE_ISSIGN(30009,"Mobile is sign in system"),
-    REDIS_VAILDCODE(30011,"Vaildcode is not in redis"),
-    VAILDCODE_ISNULL(30012,"Vaildcode is null"),
-    INVALID_VAILDCODE(30013,"VaildCode is incorrect"),
-    INVALID_NEWPASSWORD(30014,"Newpassword equals oldpassword"),
-    INVALID_REDIS_TOKEN(30015,"Invalid redis token"),
-    INVALID_SHOPSID(30015,"Invalid shopsid");
+
+    INVALID_MOBILE(30011,"Mobile is null"),
+    INVALID_ADMINID(30011,"Invalid adminid"),
+    INVALID_PASSWORD_ISNULL(30012,"Password is null"),
+    INVALID_OLDPASSWORD(30013,"OldPassword is null"),
+    INVALID_NEWPASSWORD(30014,"NewPassword is null"),
+    INVALID_TOKENOFKEY_ISNULL(30015,"key of token is null"),
+    INVALID_REDISKEY_ISNULL(30016,"redis key is null"),
+    INVALID_MOBILE_ISSIGN(30017,"Mobile is sign in system"),
+    INVALID_REDIS_VAILDCODE(30018,"Vaildcode is not in redis"),
+    INVALID_VAILDCODE(30019,"Vaildcode is null"),
+    INVALID_REDIS_TOKEN(30020,"Invalid redis token"),
+
+    INVALID_SHOPSID(30021,"Invalid shopsid"),
+    INVALID_UPLOAD_FILE(30022,"Invalid upload file"),
+    INVALID_ESTATESTYPE(30023,"Invalid estates type"),
+    INVALID_RELEASEDATE(30023,"Invalid release date"),
+    INVALID_MOBILEPHONE(30023,"Invalid link mobilephone"),
+    INVALID_FLOOR(30023,"Invalid floor"),
+    INVALID_RELEASETYPE(30023,"Invalid release type"),
+
+    INVALID_RENTID(30031,"Invalid rentid"),
+    INVALID_NICKNAME(30032,"Invalid nickname"),
+    INVALID_ADDRESS(30033,"Invalid address"),
+    INVALID_SHOPSIZEMIN(30034,"Invalid min_shopsize"),
+    INVALID_SHOPSIZEMAX(30035,"Invalid max_shopsize"),
+    INVALID_RENTFEEMIN(30036,"Invalid min_rentfee"),
+    INVALID_RENTFEEMAX(30037,"Invalid max_rentfee"),
+    ;
 
     private int errcode;
     private String errmsg;  

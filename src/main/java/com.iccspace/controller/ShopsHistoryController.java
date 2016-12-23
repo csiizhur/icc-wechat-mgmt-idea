@@ -3,6 +3,7 @@ package com.iccspace.controller;
 import com.iccspace.controller.model.ShopsAddModel;
 import com.iccspace.controller.model.ShopsEditModel;
 import com.iccspace.controller.model.ShopsListRequest;
+import com.iccspace.core.Constants;
 import com.iccspace.service.ShopsHistoryService;
 import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
@@ -39,7 +40,7 @@ public class ShopsHistoryController {
     public Object cuzuShopsList(String estatesType){
         ResultMsg resultMsg;
         ShopsListRequest shopsListRequest = new ShopsListRequest();
-        shopsListRequest.setReleaseType(1);
+        shopsListRequest.setReleaseType(Constants.CHU_ZU);
 
         if(!StringUtils.isEmpty(estatesType)){
             shopsListRequest.setEstatesType(estatesType);
@@ -56,6 +57,10 @@ public class ShopsHistoryController {
     @RequestMapping(method = RequestMethod.GET,value = "photosList",produces = "application/json;charset=UTF-8")
     public Object propertyPhotosList(String shopsId){
         ResultMsg resultMsg;
+        if(StringUtils.isEmpty(shopsId)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_SHOPSID.getErrcode(),ResultStatusCode.INVALID_SHOPSID.getErrmsg(),null);
+            return resultMsg;
+        }
         resultMsg=shopsHistoryService.photosList(shopsId);
         return resultMsg;
     }
@@ -68,6 +73,10 @@ public class ShopsHistoryController {
     @RequestMapping(method = RequestMethod.GET,value = "auditsList",produces = "application/json;charset=UTF-8")
     public Object propertyAuditsList(String shopsId){
         ResultMsg resultMsg;
+        if(StringUtils.isEmpty(shopsId)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_SHOPSID.getErrcode(),ResultStatusCode.INVALID_SHOPSID.getErrmsg(),null);
+            return resultMsg;
+        }
         resultMsg=shopsHistoryService.auditsList(shopsId);
         return resultMsg;
     }
@@ -82,6 +91,7 @@ public class ShopsHistoryController {
         ResultMsg resultMsg;
         if(StringUtils.isEmpty(shopsId)){
             resultMsg = new ResultMsg(ResultStatusCode.INVALID_SHOPSID.getErrcode(),ResultStatusCode.INVALID_SHOPSID.getErrmsg(),null);
+            return resultMsg;
         }
         resultMsg = shopsHistoryService.shopsDetail(shopsId);
         return resultMsg;
@@ -95,6 +105,22 @@ public class ShopsHistoryController {
     @RequestMapping(method = RequestMethod.POST,value = "shopsEdit",produces = "application/json;charset=UTF-8")
     public Object editShops(@RequestBody ShopsEditModel shopsEditModel){
         ResultMsg resultMsg;
+        String shopsId = shopsEditModel.getShopsId();
+        String estatesType = shopsEditModel.getEstatesType();
+        String address = shopsEditModel.getShopsAddress();
+
+        if(StringUtils.isEmpty(shopsId)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_SHOPSID.getErrcode(),ResultStatusCode.INVALID_SHOPSID.getErrmsg(),null);
+            return resultMsg;
+        }
+        if(StringUtils.isEmpty(estatesType)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_ESTATESTYPE.getErrcode(),ResultStatusCode.INVALID_ESTATESTYPE.getErrmsg(),null);
+            return resultMsg;
+        }
+        if(StringUtils.isEmpty(address)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_ADDRESS.getErrcode(),ResultStatusCode.INVALID_ADDRESS.getErrmsg(),null);
+            return resultMsg;
+        }
         resultMsg = shopsHistoryService.shopsEdit(shopsEditModel);
         return resultMsg;
     }
@@ -109,15 +135,21 @@ public class ShopsHistoryController {
     public Object uploadPhotos(MultipartFile multipartFile, HttpServletRequest request){
         ResultMsg resultMsg;
         if(multipartFile.isEmpty()){
-            resultMsg = new ResultMsg(3333,"",null);
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_UPLOAD_FILE.getErrcode(),
+                    ResultStatusCode.INVALID_UPLOAD_FILE.getErrmsg(),null);
            return  resultMsg;
         }
         String path = request.getSession().getServletContext().getRealPath("upload");
+        //String path = "D://upload//";
         String fileName = multipartFile.getOriginalFilename();
-        File targetFile = new File(path,fileName);
+        String f=path+"/"+fileName;
+        File mk= new File(path);
+        File targetFile = new File(f);
+        System.getProperty("os");
+
         //目录不存在，则创建目录
-        if(!targetFile.exists()){
-            targetFile.mkdirs();
+        if(!mk.exists()){
+            mk.mkdirs();
         }
         //保存
         try {
@@ -126,7 +158,7 @@ public class ShopsHistoryController {
             e.printStackTrace();
         }
         Map map = new HashMap();
-        map.put("url",request.getContextPath()+"/upload"+fileName);
+        map.put("url",request.getContextPath()+"/upload/"+fileName);
         resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),"",map);
         return resultMsg;
     }
@@ -151,11 +183,66 @@ public class ShopsHistoryController {
 
         //时间转换
 
+        if(StringUtils.isEmpty(releaseDate)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_RELEASEDATE.getErrcode(),ResultStatusCode.INVALID_RELEASEDATE.getErrmsg(),null);
+            return resultMsg;
+        }
+        if(StringUtils.isEmpty(mobilePhone)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_MOBILEPHONE.getErrcode(),ResultStatusCode.INVALID_MOBILEPHONE.getErrmsg(),null);
+            return resultMsg;
+        }
+        if(StringUtils.isEmpty(floor)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_FLOOR.getErrcode(),ResultStatusCode.INVALID_FLOOR.getErrmsg(),null);
+            return resultMsg;
+        }
+        if(StringUtils.isEmpty(shopsAddress)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_ADDRESS.getErrcode(),ResultStatusCode.INVALID_ADDRESS.getErrmsg(),null);
+            return resultMsg;
+        }
+        if(releaseType==null || releaseType==0){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_RELEASETYPE.getErrcode(),ResultStatusCode.INVALID_RELEASETYPE.getErrmsg(),null);
+            return resultMsg;
+        }
         if(StringUtils.isEmpty(estatesType)){
-            resultMsg = new ResultMsg(1,"",null);
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_ESTATESTYPE.getErrcode(),
+                    ResultStatusCode.INVALID_ESTATESTYPE.getErrmsg(),null);
             return resultMsg;
         }
         resultMsg = shopsHistoryService.shopsAdd(shopsAddModel);
+        return resultMsg;
+    }
+
+    /**
+     * hezu List
+     * @param estatesType
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.GET,value = "hezuList",produces = "application/json;charset=UTF-8")
+    public Object hezuShopsList(String estatesType){
+        ResultMsg resultMsg;
+        ShopsListRequest shopsListRequest = new ShopsListRequest();
+        if(StringUtils.isEmpty(estatesType)){
+            shopsListRequest.setEstatesType(estatesType);
+        }
+        shopsListRequest.setReleaseType(Constants.HE_ZU);
+        resultMsg = shopsHistoryService.shopsList(shopsListRequest);
+        return resultMsg;
+    }
+
+    /**
+     * zhuanzu List
+     * @param estatesType
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.GET,value = "zhuanzuList",produces = "application/json;charset=UTF-8")
+    public Object zhuanzuShopsList(String estatesType){
+        ResultMsg resultMsg;
+        ShopsListRequest shopsListRequest = new ShopsListRequest();
+        shopsListRequest.setReleaseType(Constants.ZHUAN_ZU);
+        if(StringUtils.isEmpty(estatesType)){
+            shopsListRequest.setEstatesType(estatesType);
+        }
+        resultMsg = shopsHistoryService.shopsList(shopsListRequest);
         return resultMsg;
     }
 }

@@ -5,10 +5,19 @@ package com.iccspace.vo;
  */
 public class AdminEdit {
 
+    private String adminId;
     private String mobile;
     private String oldPassword;
     private String newPassword;
     private String vaildCode;
+
+    public String getAdminId() {
+        return adminId;
+    }
+
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
+    }
 
     public String getMobile() {
         return mobile;
