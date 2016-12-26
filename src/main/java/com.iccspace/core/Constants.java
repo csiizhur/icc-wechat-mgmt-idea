@@ -47,4 +47,7 @@ public class Constants {
 	public static final int OPERATOR_FILE_SUCCESS=0;
 	public static final int OPERATOR_FILE_ERROR=30001;
 	public static final String OPERATOR_FILE_ERROR_MESSAGE="operator file fail";
+
+	public static final String UPLOAD_PATH_WIN="D://upload//photo//";
+	public static final String UPLOAD_PATH_LINUX="/mnt/iccspace/upload/mgmt_photo/";
 }

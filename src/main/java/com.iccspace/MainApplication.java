@@ -287,9 +287,19 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry){
+        String relativelyPath = System.getProperty("user.dir");
+        resourceHandlerRegistry.addResourceHandler("p/**").addResourceLocations("file:"+relativelyPath);
         resourceHandlerRegistry.addResourceHandler("/logs/**").addResourceLocations("classpath:/logs/log4j/");
-        resourceHandlerRegistry.addResourceHandler("/photo/**").addResourceLocations("file:D:/upload/photo/**");
-        resourceHandlerRegistry.addResourceHandler("/photo/**").addResourceLocations("file:/mnt/iccspace/upload/mgmt_photo/");
+        String os_name = System.getProperty("os.name");
+        if(os_name!=null && os_name.toLowerCase().indexOf("linux")>-1){
+            resourceHandlerRegistry.addResourceHandler("/photo/**").addResourceLocations("file:/mnt/iccspace/upload/mgmt_photo/");
+
+        }else{
+            resourceHandlerRegistry.addResourceHandler("/photo/**").addResourceLocations("file:D:/upload/photo/");
+
+        }
+        //处理多级目录访问
+
         super.addResourceHandlers(resourceHandlerRegistry);
     }
 }

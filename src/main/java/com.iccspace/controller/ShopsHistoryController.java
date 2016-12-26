@@ -4,6 +4,7 @@ import com.iccspace.controller.model.ShopsAddModel;
 import com.iccspace.controller.model.ShopsEditModel;
 import com.iccspace.controller.model.ShopsListRequest;
 import com.iccspace.core.Constants;
+import com.iccspace.service.FilesService;
 import com.iccspace.service.ShopsHistoryService;
 import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
@@ -32,6 +33,9 @@ public class ShopsHistoryController {
 
     @Autowired
     private ShopsHistoryService shopsHistoryService;
+
+    @Autowired
+    private FilesService filesService;
 
     /**
      * cuzhu list
@@ -145,39 +149,25 @@ public class ShopsHistoryController {
                     ResultStatusCode.INVALID_UPLOAD_FILE.getErrmsg(),null);
            return  resultMsg;
         }
-        String path = request.getSession().getServletContext().getRealPath("upload");
-        //String path = "D://upload//";
-        String fileName = multipartFile.getOriginalFilename();
-        String f=path+"/"+fileName;
-        File mk= new File(path);
-        File targetFile = new File(f);
-        System.getProperty("os");
+        //容器upload目录
+        //String path = request.getSession().getServletContext().getRealPath("upload");
 
-        //目录不存在，则创建目录
-        if(!mk.exists()){
-            mk.mkdirs();
-        }
-        //保存
-        try {
-            multipartFile.transferTo(targetFile);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Map map = new HashMap();
-        map.put("local_url",f);
-        map.put("url",request.getContextPath()+"/upload/"+fileName);
-        resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),"",map);
+        String  url = request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/photo/";
+
+        resultMsg = filesService.uploadShopsPhotos(multipartFile,url);
         return resultMsg;
     }
 
     /**
      * 单个文件上传到项目根路径下
+     * String relativelyPath=System.getProperty("user.dir");
      * @param multipartFile
      * @return
      */
     @RequestMapping(method = RequestMethod.POST,value = "photosUpload2",consumes = "multipart/form-data")
-    public Object uploadPhotos2(MultipartFile multipartFile){
+    public Object uploadPhotos2(MultipartFile multipartFile,HttpServletRequest request){
         ResultMsg resultMsg;
+        String relativelyPath=System.getProperty("user.dir");
         if(multipartFile.isEmpty()){
             resultMsg = new ResultMsg(ResultStatusCode.INVALID_UPLOAD_FILE.getErrcode(),ResultStatusCode.INVALID_UPLOAD_FILE.getErrmsg(),null);
             return  resultMsg;
@@ -198,7 +188,16 @@ public class ShopsHistoryController {
             return resultMsg;
         }
         Map<String,Object> map = new HashMap<String,Object>();
+        map.put("local_url", relativelyPath+File.separator+multipartFile.getOriginalFilename());
         //map.put("url", file);
+        //Api
+        String s=request.getContextPath().toString();
+        //shops/photosUpload2
+        String s1=request.getServletPath().toString();
+        //Api
+        String s2=request.getSession().getServletContext().getContextPath();
+        //C:\Users\Administrator\AppData\Local\Temp\tomcat-docbase.4914921786617702531.8896
+        String s3=request.getSession().getServletContext().getRealPath("/");
         return new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"",map);
     }
 
