@@ -73,8 +73,8 @@ public interface ShopsHistoryMapper {
             "where historyid=#{shopsId}")
     public int updateBaseShops(ShopsEditModel shopsEditModel);
 
-    @Insert("insert SHOPS_HISTORY(id,BASE_SHOPSID,estates_type,create_time,mobilephone,floor,rent_fee,release_type) " +
-            "values(#{shopsId},#{baseShopsId},#{estatesType},#{releaseDate},#{mobilePhone},#{floor},#{rentFee},#{releaseType})")
+    @Insert("insert SHOPS_HISTORY(id,BASE_SHOPSID,estates_type,create_time,mobilephone,floor,rent_fee,release_type,userid) " +
+            "values(#{shopsId},#{baseShopsId},#{estatesType},#{releaseDate},#{mobilePhone},#{floor},#{rentFee},#{releaseType},#{userId})")
     public int insertHistoryShops(ShopsAddModel shopsAddModel);
 
     @Insert("insert SHOPS(id,shop_size,address,historyid) " +

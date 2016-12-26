@@ -8,11 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;  
 import javax.servlet.ServletResponse;  
 import javax.servlet.http.HttpServletRequest;  
-import javax.servlet.http.HttpServletResponse;  
-  
-import org.springframework.beans.factory.annotation.Autowired;  
-import org.springframework.web.context.support.SpringBeanAutowiringSupport;  
-  
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import com.fasterxml.jackson.databind.ObjectMapper;  
  
 /**
@@ -49,7 +47,7 @@ public class HTTPBearerAuthorizeAttribute implements Filter{
                   
                 auth = auth.substring(7, auth.length());   
                 if (JwtHelper.parseJWT(auth, audienceEntity.getBase64Secret()) != null)  
-                {  
+                {
                     chain.doFilter(request, response);  
                     return;  
                 }  

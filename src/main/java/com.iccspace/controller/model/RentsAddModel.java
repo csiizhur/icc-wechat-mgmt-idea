@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 public class RentsAddModel {
 
     private String nickName;
+    private String userId="iccspace_system";
 
     private Timestamp releaseDate;
     private String expectShopsizeMin;
@@ -18,10 +19,46 @@ public class RentsAddModel {
     private String businessType;
     private String expectAddress;
 
+    private String adminId;
     private String desc;
+    private Timestamp autitTime;
+
+    private String rentId;
 
     public String getNickName() {
         return nickName;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public Timestamp getAutitTime() {
+        return autitTime;
+    }
+
+    public void setAutitTime(Timestamp autitTime) {
+        this.autitTime = autitTime;
+    }
+
+    public String getAdminId() {
+        return adminId;
+    }
+
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
+    }
+
+    public String getRentId() {
+        return rentId;
+    }
+
+    public void setRentId(String rentId) {
+        this.rentId = rentId;
     }
 
     public void setNickName(String nickName) {

@@ -60,9 +60,9 @@ public interface RentUsersMapper {
 	public int updateRentShops(RentsEditModel rentsEditModel);
 
 	@Insert("insert into `wechat-server-db`.RENT_SHOPS (rent_id,address,businesstype,mobilephone,create_time," +
-			"expectshopsize_min,expectshopsize_max,expectrentfee_min,expectrentfee_max) "
-			+ "values(#{rentId},#{expectAddress},#{businessType},#{mobilePhone},now(),'system'," +
-			"#{expectShopSizeMin},#{expectShopSizeMax},#{expectRentFeeMin},#{expectRentFeeMax})")
-    @SelectKey(statement="select replace(uuid(),'-','') from dual", keyProperty="rentId", before=true, resultType=String.class)
+			"expectshopsize_min,expectshopsize_max,expectrentfee_min,expectrentfee_max,userid) "
+			+ "values(#{rentId},#{expectAddress},#{businessType},#{mobilePhone},now()," +
+			"#{expectShopSizeMin},#{expectShopSizeMax},#{expectRentFeeMin},#{expectRentFeeMax},#{userId})")
+    //@SelectKey(statement="select replace(uuid(),'-','') from dual", keyProperty="rentId", before=true, resultType=String.class)
     public int insertRentShops(RentsAddModel rentsAddModel);
 }

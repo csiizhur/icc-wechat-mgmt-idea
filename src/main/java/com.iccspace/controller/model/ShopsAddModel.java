@@ -2,6 +2,7 @@ package com.iccspace.controller.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 /**
  * Created by Administrator on 2016/12/22.
@@ -9,6 +10,8 @@ import java.math.BigDecimal;
 public class ShopsAddModel implements Serializable{
 
     private static final long serialVersionUID = -4358002317537580709L;
+
+    private String userId="iccspace_system";
 
     private String estatesType;
     private String releaseDate;
@@ -18,10 +21,37 @@ public class ShopsAddModel implements Serializable{
     private String shopsAddress;
     private BigDecimal rentFee;
     private Integer releaseType;
+
+    private String adminId;
     private String desc;
+    private Timestamp auditTime;
 
     private String shopsId;
     private String baseSHopsId;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getAdminId() {
+        return adminId;
+    }
+
+    public Timestamp getAuditTime() {
+        return auditTime;
+    }
+
+    public void setAuditTime(Timestamp auditTime) {
+        this.auditTime = auditTime;
+    }
+
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
+    }
 
     public String getEstatesType() {
         return estatesType;

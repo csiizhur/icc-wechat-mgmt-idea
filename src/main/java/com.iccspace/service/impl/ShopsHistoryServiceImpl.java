@@ -1,7 +1,6 @@
 package com.iccspace.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
-import com.github.pagehelper.Constant;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.iccspace.controller.model.AuditAddModel;
@@ -16,6 +15,7 @@ import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -104,13 +104,21 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
         int s_db=shopsHistoryMapper.insertBaseShops(shopsAddModel);
         int b_db=shopsHistoryMapper.insertHistoryShops(shopsAddModel);
 
-        AuditAddModel auditAddModel = new AuditAddModel(shopsAddModel.getDesc(),shopsAddModel.getShopsId(),"adminids");
-        int a_db=auditMapper.insertShopsAudit(auditAddModel);
+        String desc = shopsAddModel.getDesc();
+        if(!StringUtils.isEmpty(desc)){
+            AuditAddModel auditAddModel = new AuditAddModel(shopsAddModel.getDesc(),shopsAddModel.getShopsId(),shopsAddModel.getAdminId());
+            auditAddModel.setAuditTime(shopsAddModel.getAuditTime());
+            int a_db=auditMapper.insertShopsAudit(auditAddModel);
+            if(a_db!=Constants.AFFECT_DB_ROWS_1){
+                resultMsg = new ResultMsg(Constants.OPERATOR_DB_ERROR,"insert audit error",null);
+                return resultMsg;
+            }
+        }
 
         if(s_db!=Constants.AFFECT_DB_ROWS_1 && b_db!=Constants.AFFECT_DB_ROWS_1){
-            resultMsg = new ResultMsg(Constants.OPERATOR_DB_ERROR,"insert db error",null);
+            resultMsg = new ResultMsg(Constants.OPERATOR_DB_ERROR,"insert shops error",null);
             return resultMsg;
         }
-        return new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"",null);
+        return new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"insert data success",null);
     }
 }

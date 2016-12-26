@@ -6,8 +6,11 @@ import com.iccspace.controller.model.ShopsListRequest;
 import com.iccspace.core.Constants;
 import com.iccspace.service.FilesService;
 import com.iccspace.service.ShopsHistoryService;
+import com.iccspace.token.Audience;
+import com.iccspace.token.JwtHelper;
 import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,6 +39,9 @@ public class ShopsHistoryController {
 
     @Autowired
     private FilesService filesService;
+
+    @Autowired
+    private Audience audienceEntity;
 
     /**
      * cuzhu list
@@ -247,7 +253,7 @@ public class ShopsHistoryController {
      * @return
      */
     @RequestMapping(method = RequestMethod.POST,value = "shopsAdd",produces = "application/json;charset=UTF-8")
-    public Object addShops(@RequestBody ShopsAddModel shopsAddModel){
+    public Object addShops(HttpServletRequest request,@RequestBody ShopsAddModel shopsAddModel){
         ResultMsg resultMsg;
         String estatesType = shopsAddModel.getEstatesType();
         String releaseDate = shopsAddModel.getReleaseDate();
@@ -259,8 +265,20 @@ public class ShopsHistoryController {
         Integer releaseType = shopsAddModel.getReleaseType();
         String desc = shopsAddModel.getDesc();
 
-        //时间转换
+        String auth = request.getHeader("Authorization");
+        if ((auth != null) && (auth.length() > 7))
+        {
+            String HeadStr = auth.substring(0, 6).toLowerCase();
+            if (HeadStr.compareTo("bearer") == 0)
+            {
+                auth = auth.substring(7, auth.length());
+                Claims claims = JwtHelper.parseJWT(auth,audienceEntity.getBase64Secret());
+                String adminId = claims.get("userid").toString();
+                shopsAddModel.setAdminId(adminId);
+            }
+        }
 
+        //时间转换
         if(StringUtils.isEmpty(releaseDate)){
             resultMsg = new ResultMsg(ResultStatusCode.INVALID_RELEASEDATE.getErrcode(),ResultStatusCode.INVALID_RELEASEDATE.getErrmsg(),null);
             return resultMsg;
