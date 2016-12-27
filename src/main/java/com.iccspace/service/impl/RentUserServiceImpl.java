@@ -75,7 +75,7 @@ public class RentUserServiceImpl implements RentUserService {
         String desc = rentsAddModel.getDesc();
         if(!StringUtils.isEmpty(desc)){
             AuditAddModel auditAddModel = new AuditAddModel(rentsAddModel.getDesc(),rentsAddModel.getRentId(),rentsAddModel.getAdminId());
-            auditAddModel.setAuditTime(rentsAddModel.getAutitTime());
+            auditAddModel.setAuditTime(rentsAddModel.getAuditTime());
             int db_audit = auditMapper.insertRentsAudit(auditAddModel);
 
             if(db_audit!=Constants.AFFECT_DB_ROWS_1){

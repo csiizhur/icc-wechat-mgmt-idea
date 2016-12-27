@@ -21,7 +21,7 @@ public class RentsAddModel {
 
     private String adminId;
     private String desc;
-    private Timestamp autitTime;
+    private Timestamp auditTime;
 
     private String rentId;
 
@@ -37,12 +37,12 @@ public class RentsAddModel {
         this.userId = userId;
     }
 
-    public Timestamp getAutitTime() {
-        return autitTime;
+    public Timestamp getAuditTime() {
+        return auditTime;
     }
 
-    public void setAutitTime(Timestamp autitTime) {
-        this.autitTime = autitTime;
+    public void setAuditTime(Timestamp auditTime) {
+        this.auditTime = auditTime;
     }
 
     public String getAdminId() {

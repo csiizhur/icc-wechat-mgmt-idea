@@ -55,7 +55,7 @@ public class HTTPBearerAuthorizeAttribute implements Filter{
         }  
           
         HttpServletResponse httpResponse = (HttpServletResponse) response;  
-        httpResponse.setCharacterEncoding("UTF-8");    
+        httpResponse.setCharacterEncoding("UTF-8");
         httpResponse.setContentType("application/json; charset=utf-8");   
         httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);  
   
