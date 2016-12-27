@@ -185,7 +185,7 @@ public class AdminController {
         String vaildcode = adminEdit.getVaildCode();
         String vaildvalue = adminEdit.getVaildValue();
         String mobile = adminEdit.getMobile();
-
+        String password = adminEdit.getNewPassword();
         if(StringUtils.isEmpty(vaildcode)){
             return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
         }
@@ -195,7 +195,9 @@ public class AdminController {
         if(StringUtils.isEmpty(mobile)){
             return new ResultMsg(ResultStatusCode.INVALID_MOBILE.getErrcode(),ResultStatusCode.INVALID_MOBILE.getErrmsg(),null);
         }
-
+        if(StringUtils.isEmpty(password)){
+            return new ResultMsg(ResultStatusCode.INVALID_NEWPASSWORD.getErrcode(),ResultStatusCode.INVALID_NEWPASSWORD.getErrmsg(),null);
+        }
         ResultMsg msg=adminService.restPassword(adminEdit);
         return msg;
     }
