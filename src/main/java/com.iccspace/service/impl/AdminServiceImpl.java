@@ -116,29 +116,28 @@ public class AdminServiceImpl implements AdminService{
 
     @Override
     public ResultMsg restPassword(AdminEdit adminEdit) {
-        //从redis获取带时间的vildCode
+
         RedisConnectionFactory f=stringRedisTemplate.getConnectionFactory();
         RedisConnection c=f.getConnection();
         c.getClientName();
-        //java.lang.IllegalArgumentException: non null key required
-        if(StringUtils.isEmpty(adminEdit.getVaildCode())){
-            return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
+
+        String vaildcode = adminEdit.getVaildCode();
+        String vaildvalue = adminEdit.getVaildValue();
+        String mobile = adminEdit.getMobile();
+
+        String redisVaildCodeValue=null;
+        if(!StringUtils.isEmpty(vaildcode)){
+            redisVaildCodeValue = stringRedisTemplate.opsForValue().get(vaildcode);
         }
-        if(StringUtils.isEmpty(adminEdit.getMobile())){
-            return new ResultMsg(ResultStatusCode.INVALID_REDISKEY_ISNULL.getErrcode(),ResultStatusCode.INVALID_REDISKEY_ISNULL.getErrmsg(),null);
-        }
-        if(StringUtils.isEmpty(adminEdit.getAdminId())){
-            return new ResultMsg(ResultStatusCode.INVALID_ADMINID.getErrcode(),ResultStatusCode.INVALID_ADMINID.getErrmsg(),null);
-        }
-        //String redisVaildCode=stringRedisTemplate.opsForValue().get(adminEdit.getVaildCode());
-        String redisVaildCode = stringRedisTemplate.opsForValue().get(adminEdit.getAdminId()+"_"+adminEdit.getMobile());
-        if(StringUtils.isEmpty(redisVaildCode)){
+
+        if(StringUtils.isEmpty(redisVaildCodeValue)){
             return new ResultMsg(ResultStatusCode.INVALID_REDIS_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_REDIS_VAILDCODE.getErrmsg(),null);
         }
-        if(!adminEdit.getVaildCode().equals(redisVaildCode)){
+        if(!vaildvalue.equals(redisVaildCodeValue)){
             return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
         }
-        Admin user= adminMapper.queryAdminInfoByMobile(adminEdit.getMobile());
+
+        Admin user= adminMapper.queryAdminInfoByMobile(mobile);
         user.setPassword(MyMD5Utils.getMD5(adminEdit.getNewPassword()+ Constants.PWD_SALT));
         int result=adminMapper.updateAdminPassword(user);
 

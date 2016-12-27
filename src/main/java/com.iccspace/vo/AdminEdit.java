@@ -10,6 +10,7 @@ public class AdminEdit {
     private String oldPassword;
     private String newPassword;
     private String vaildCode;
+    private String vaildValue;
 
     public String getAdminId() {
         return adminId;
@@ -49,5 +50,13 @@ public class AdminEdit {
 
     public void setVaildCode(String vaildCode) {
         this.vaildCode = vaildCode;
+    }
+
+    public String getVaildValue() {
+        return vaildValue;
+    }
+
+    public void setVaildValue(String vaildValue) {
+        this.vaildValue = vaildValue;
     }
 }

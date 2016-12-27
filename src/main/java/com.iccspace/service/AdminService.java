@@ -15,7 +15,7 @@ public interface AdminService {
     public ResultMsg adminOauthToken(Admin admin);
     //edit pwd
     public ResultMsg editAdminPassword(AdminEdit admin);
-
+    //rest pwd
     public ResultMsg restPassword(AdminEdit adminEdit);
 
     public ResultMsg adminLoginOut(Admin admin);

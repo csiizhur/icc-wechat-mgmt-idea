@@ -1,5 +1,8 @@
 package com.iccspace.controller;
 
+import cn.apiclub.captcha.Captcha;
+import cn.apiclub.captcha.backgrounds.GradiatedBackgroundProducer;
+import cn.apiclub.captcha.gimpy.FishEyeGimpyRenderer;
 import com.alibaba.fastjson.JSONObject;
 import com.iccspace.mapper.AdminMapper;
 import com.iccspace.service.AdminService;
@@ -11,9 +14,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.imageio.ImageIO;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -119,7 +129,7 @@ public class AdminController {
      * @param mobile
      * @return
      */
-    @RequestMapping(method = RequestMethod.POST,value = "sendVaildCode",produces = "application/json;charset=UTF-8")
+    @RequestMapping(method = RequestMethod.POST,value = "sendVaildCode2",produces = "application/json;charset=UTF-8")
     public Object sendVaildCode(String adminId,String mobile){
         ResultMsg resultMsg;
         //模拟的校验码
@@ -132,6 +142,37 @@ public class AdminController {
         resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),json);
         return resultMsg;
     }
+    private static int captchaExpires = 3*60; //超时时间3min
+    private static int captchaW = 200;
+    private static int captchaH = 60;
+
+    /**
+     * send vaild_code
+     * @param response
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.GET,value = "sendVaildCode",produces = MediaType.IMAGE_PNG_VALUE)
+    public byte[] getCaptcha(HttpServletResponse response){
+        //生成验证码 没使用mobile作为redis的key
+        String uuid = UUID.randomUUID().toString();
+        Captcha captcha = new Captcha.Builder(captchaW, captchaH)
+                .addText().addBackground(new GradiatedBackgroundProducer())
+                .gimp(new FishEyeGimpyRenderer())
+                .build();
+        //将验证码以<key,value>形式缓存到redis
+        stringRedisTemplate.opsForValue().set(uuid, captcha.getAnswer(), captchaExpires, TimeUnit.SECONDS);
+
+        //将验证码key，及验证码的图片返回
+        Cookie cookie = new Cookie("CaptchaCode",uuid);
+        response.addCookie(cookie);
+        ByteArrayOutputStream bao = new ByteArrayOutputStream();
+        try {
+            ImageIO.write(captcha.getImage(), "png", bao);
+            return bao.toByteArray();
+        } catch (IOException e) {
+            return null;
+        }
+    }
 
     /**
      * rest pwd
@@ -140,12 +181,21 @@ public class AdminController {
      */
     @RequestMapping(method = RequestMethod.POST,value = "restPassword",produces = "application/json;charset=UTF-8")
     public Object restAdminPassword(@RequestBody AdminEdit adminEdit){
-        Object o=redisService.queryRedisToken(adminEdit.getMobile());
-        log.error("redis-->"+o);
-        //redis token {mobile:access_token}
-        if(o==null){
-            return new ResultMsg(ResultStatusCode.INVALID_REDIS_TOKEN.getErrcode(),ResultStatusCode.INVALID_REDIS_TOKEN.getErrmsg(),null);
+
+        String vaildcode = adminEdit.getVaildCode();
+        String vaildvalue = adminEdit.getVaildValue();
+        String mobile = adminEdit.getMobile();
+
+        if(StringUtils.isEmpty(vaildcode)){
+            return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
         }
+        if(StringUtils.isEmpty(vaildvalue)){
+            return new ResultMsg(ResultStatusCode.INVALID_VAILDCODE.getErrcode(),ResultStatusCode.INVALID_VAILDCODE.getErrmsg(),null);
+        }
+        if(StringUtils.isEmpty(mobile)){
+            return new ResultMsg(ResultStatusCode.INVALID_MOBILE.getErrcode(),ResultStatusCode.INVALID_MOBILE.getErrmsg(),null);
+        }
+
         ResultMsg msg=adminService.restPassword(adminEdit);
         return msg;
     }
