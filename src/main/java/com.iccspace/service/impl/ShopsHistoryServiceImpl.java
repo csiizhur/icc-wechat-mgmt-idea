@@ -116,6 +116,14 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
         if(photosId.length>0){
             shopsPhotoMapper.updateBatchShopsPhotos(photosId);
         }
+
+        //update thumbnail
+        if(jsonArray.size()>0){
+            Map m = (Map)jsonArray.get(0);
+            ThumbnailUrlEditModel thumbnailUrlEditModel = new ThumbnailUrlEditModel(shopsId,m.get("oss_url").toString());
+            shopsPhotoMapper.updateShopsThumbnailUrl(thumbnailUrlEditModel);
+        }
+
         resultMsg =new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),jsonArray);
         return resultMsg;
     }

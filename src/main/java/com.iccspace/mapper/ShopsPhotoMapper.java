@@ -1,6 +1,7 @@
 package com.iccspace.mapper;
 
 import com.iccspace.controller.model.PhotosAddModel;
+import com.iccspace.controller.model.ThumbnailUrlEditModel;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectKey;
@@ -33,4 +34,7 @@ public interface ShopsPhotoMapper {
             "</foreach>" +
             "</script>")
     public int updateBatchShopsPhotos(@Param("photosId") String[] photosId);
+
+    @Update("update SHOPS_HISTORY set thumbnail_url=#{thumbnailUrl} where id=#{shopsId}")
+    public int updateShopsThumbnailUrl(ThumbnailUrlEditModel thumbnailUrlEditModel);
 }

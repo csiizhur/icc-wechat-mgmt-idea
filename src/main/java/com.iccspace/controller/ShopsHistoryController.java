@@ -98,6 +98,8 @@ public class ShopsHistoryController {
                 jsonArray.add(map);
             }
         }
+        //thumbnail
+
         resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),jsonArray);
         return resultMsg;
     }
@@ -111,7 +113,7 @@ public class ShopsHistoryController {
     @RequestMapping(method = RequestMethod.POST,value = "photosEdit",consumes = "multipart/form-data")
     public Object propertyPhotosEdit(MultipartFile[] files,String [] photosId,String shopsId){
         ResultMsg resultMsg;
-        if(files.length==0 && photosId.length==0){
+        if(files.length==0 && photosId==null){
             resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),"photo not edit and not upload new photos",null);
             return resultMsg;
         }
