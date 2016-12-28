@@ -269,13 +269,23 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
         }
     }*/
 
-    //将MultipartConfigElement 注册到DispatcherServlet
+    /**
+     * 将MultipartConfigElement 注册到DispatcherServlet
+     * 单个文件上传5MB
+     * 总文件大小10MB
+     * @return
+     */
     @Bean
     public MultipartConfigElement multipartConfigElement(){
         MultipartConfigFactory multipartConfigFactory=new MultipartConfigFactory();
-        multipartConfigFactory.setMaxFileSize("128KB");
-        multipartConfigFactory.setMaxRequestSize("256KB");
-        multipartConfigFactory.setLocation("D://upload//");
+        multipartConfigFactory.setMaxFileSize("5MB");
+        multipartConfigFactory.setMaxRequestSize("10MB");
+        String osName = System.getProperty("os.name");
+        if(osName!=null && osName.toLowerCase().indexOf("linux")>-1){
+            multipartConfigFactory.setLocation("/mnt/iccspace/upload/temp/");
+        }else{
+            multipartConfigFactory.setLocation("D://upload//");
+        }
 
         return multipartConfigFactory.createMultipartConfig();
     }

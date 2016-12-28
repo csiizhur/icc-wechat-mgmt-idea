@@ -35,6 +35,9 @@ public enum ResultStatusCode {
     INVALID_SHOPSIZEMAX(30035,"Invalid max_shopsize"),
     INVALID_RENTFEEMIN(30036,"Invalid min_rentfee"),
     INVALID_RENTFEEMAX(30037,"Invalid max_rentfee"),
+
+    MULTIPART_EXCEPTION(40001,"files exceeds its maximum permitted size of 5242880 bytes."),
+    SYSTEM_EXCEPTION(40002,"server exception."),
     ;
 
     private int errcode;

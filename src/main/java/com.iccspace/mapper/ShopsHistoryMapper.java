@@ -31,7 +31,7 @@ public interface ShopsHistoryMapper {
 
     @Select("select ID,OSS_URL from SHOPS_PHOTOS_INFO where SHOPSID=#{shopsId}")
     @Results({
-            @Result(column = "ID",property = "photosId"),
+            @Result(column = "ID",property = "photoId"),
             @Result(column = "OSS_URL",property = "ossUrl")
     })
     public List<Map<String,Object>> queryShopsPhotoListByShopsId(String shopsId);
