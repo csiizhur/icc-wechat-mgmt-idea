@@ -1,10 +1,9 @@
 package com.iccspace.controller;
 
 import com.alibaba.fastjson.JSONArray;
-import com.iccspace.controller.model.ShopsAddModel;
-import com.iccspace.controller.model.ShopsEditModel;
-import com.iccspace.controller.model.ShopsListRequest;
+import com.iccspace.controller.model.*;
 import com.iccspace.core.Constants;
+import com.iccspace.mapper.ShopsPhotoMapper;
 import com.iccspace.service.ShopsHistoryService;
 import com.iccspace.token.Audience;
 import com.iccspace.token.JwtHelper;
@@ -12,6 +11,7 @@ import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +35,9 @@ public class ShopsHistoryController {
 
     @Autowired
     private Audience audienceEntity;
+
+    @Autowired
+    private ShopsPhotoMapper shopsPhotoMapper;
 
     /**
      * cuzhu list
@@ -75,6 +78,7 @@ public class ShopsHistoryController {
      * @param files
      * @return
      */
+    @Transactional
     @RequestMapping(method = RequestMethod.POST,value = "photosAdd",consumes = "multipart/form-data")
     public Object propertyPhotosAdd(MultipartFile[] files,String shopsId){
         ResultMsg resultMsg;
@@ -99,7 +103,11 @@ public class ShopsHistoryController {
             }
         }
         //thumbnail
-
+        if(jsonArray.size()>0){
+            Map m = (Map)jsonArray.get(0);
+            ThumbnailUrlEditModel thumbnailUrlEditModel = new ThumbnailUrlEditModel(shopsId,m.get("oss_url").toString());
+            shopsPhotoMapper.updateShopsThumbnailUrl(thumbnailUrlEditModel);
+        }
         resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),jsonArray);
         return resultMsg;
     }
