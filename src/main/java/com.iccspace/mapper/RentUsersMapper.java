@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface RentUsersMapper {
-	@Select("select RENT_ID,NICKNAME,EXPECTSHOPSIZE_MIN,EXPECTSHOPSIZE_MAX,EXPECTRENTFEE_MIN,EXPECTRENTFEE_MAX,MOBILEPHONE," +
+	@Select("select RENT_ID,NICKNAME,EXPECTSHOPSIZE_MIN,EXPECTSHOPSIZE_MAX,EXPECTRENTFEE_MIN,EXPECTRENTFEE_MAX,AREANO,MOBILEPHONE," +
 			"BUSINESSTYPE,CREATE_TIME from RENT_SHOPS rs left join USER u on u.id=rs.userid" +
 			"where RELEASE_TYPE=2 and DELETED=0")
 	@Results({
@@ -19,6 +19,7 @@ public interface RentUsersMapper {
 			@Result(column = "EXPECTSHOPSIZE_MAX", property = "expectShopSizeMax"),
 			@Result(column = "EXPECTRENTFEE_MIN", property = "expectRentFeeMin"),
 			@Result(column = "EXPECTRENTFEE_MAX", property = "expectRentFeeMax"),
+			@Result(column = "AREANO", property = "area"),
 			@Result(column = "MOBILEPHONE", property = "mobilePhone"),
 			@Result(column = "BUSINESSTYPE", property = "businessType"),
 			@Result(column = "CREATE_TIME", property = "releaseDate")
@@ -59,9 +60,9 @@ public interface RentUsersMapper {
 			"address=#{expectAddress}")
 	public int updateRentShops(RentsEditModel rentsEditModel);
 
-	@Insert("insert into `wechat-server-db`.RENT_SHOPS (rent_id,address,businesstype,mobilephone,create_time," +
+	@Insert("insert into `wechat-server-db`.RENT_SHOPS (rent_id,address,businesstype,mobilephone,create_time,release_type," +
 			"expectshopsize_min,expectshopsize_max,expectrentfee_min,expectrentfee_max,userid) "
-			+ "values(#{rentId},#{expectAddress},#{businessType},#{mobilePhone},now()," +
+			+ "values(#{rentId},#{expectAddress},#{businessType},#{mobilePhone},now(),#{releaseType}" +
 			"#{expectShopSizeMin},#{expectShopSizeMax},#{expectRentFeeMin},#{expectRentFeeMax},#{userId})")
     //@SelectKey(statement="select replace(uuid(),'-','') from dual", keyProperty="rentId", before=true, resultType=String.class)
     public int insertRentShops(RentsAddModel rentsAddModel);

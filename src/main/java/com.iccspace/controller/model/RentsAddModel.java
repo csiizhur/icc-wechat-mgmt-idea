@@ -18,6 +18,7 @@ public class RentsAddModel {
     private String mobilePhone;
     private String businessType;
     private String expectAddress;
+    private Integer releaseType;
 
     private String adminId;
     private String desc;
@@ -127,6 +128,14 @@ public class RentsAddModel {
 
     public void setExpectAddress(String expectAddress) {
         this.expectAddress = expectAddress;
+    }
+
+    public Integer getReleaseType() {
+        return releaseType;
+    }
+
+    public void setReleaseType(Integer releaseType) {
+        this.releaseType = releaseType;
     }
 
     public String getDesc() {

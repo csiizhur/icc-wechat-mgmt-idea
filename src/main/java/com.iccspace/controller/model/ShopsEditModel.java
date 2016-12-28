@@ -1,6 +1,7 @@
 package com.iccspace.controller.model;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 /**
  * Created by Administrator on 2016/12/21.
@@ -12,6 +13,7 @@ public class ShopsEditModel {
     private String floor;
     private BigDecimal rentFee;
     private String mobilePhone;
+    private Timestamp releaseDate;
 
     private double shopSize;
     private String shopsAddress;
@@ -46,6 +48,14 @@ public class ShopsEditModel {
 
     public void setMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
+    }
+
+    public Timestamp getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(Timestamp releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public double getShopSize() {
