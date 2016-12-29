@@ -1,9 +1,11 @@
 package com.iccspace.mapper;
 
+import com.iccspace.config.EmptyStringIfNull;
 import com.iccspace.controller.model.ShopsAddModel;
 import com.iccspace.controller.model.ShopsEditModel;
 import com.iccspace.controller.model.ShopsListRequest;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.type.JdbcType;
 
 import java.util.List;
 import java.util.Map;
@@ -24,7 +26,7 @@ public interface ShopsHistoryMapper {
             @Result(column = "SHOP_SIZE",property = "shopSize"),
             @Result(column = "RENT_FEE",property = "rentFee"),
             @Result(column = "FLOOR",property = "floor"),
-            @Result(column = "CREATE_TIME",property = "releaseDate"),
+            @Result(column = "CREATE_TIME",property = "releaseDate",javaType = String.class,jdbcType= JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class),
             @Result(column = "MOBILEPHONE",property = "mobilePhone")
     })
     public List<Map<String,Object>> queryShopsHistoryList(ShopsListRequest shopsListRequest);
@@ -40,7 +42,7 @@ public interface ShopsHistoryMapper {
     @Results({
             @Result(column = "ID",property = "auditId"),
             @Result(column = "SHOP_ID",property = "shopsId"),
-            @Result(column = "AUDIT_TIME",property = "auditTime"),
+            @Result(column = "AUDIT_TIME",property = "auditTime",javaType = String.class,jdbcType = JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class),
             @Result(column = "DESC",property = "desc"),
             @Result(column = "ADMIN_ID",property = "adminId"),
 
@@ -52,7 +54,7 @@ public interface ShopsHistoryMapper {
     @Results({
             @Result(column = "ID",property = "shopsId"),
             @Result(column = "estates_type",property = "estatesType"),
-            @Result(column = "create_time",property = "releaseDate"),
+            @Result(column = "create_time",property = "releaseDate",javaType = String.class,jdbcType = JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class),
             @Result(column = "shop_size",property = "shopSize"),
             @Result(column = "mobilephone",property = "mobilePhone"),
             @Result(column = "floor",property = "floor"),

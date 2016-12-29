@@ -1,8 +1,10 @@
 package com.iccspace.mapper;
 
+import com.iccspace.config.EmptyStringIfNull;
 import com.iccspace.controller.model.RentsAddModel;
 import com.iccspace.controller.model.RentsEditModel;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.type.JdbcType;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +24,7 @@ public interface RentUsersMapper {
 			@Result(column = "AREANO", property = "area"),
 			@Result(column = "MOBILEPHONE", property = "mobilePhone"),
 			@Result(column = "BUSINESSTYPE", property = "businessType"),
-			@Result(column = "CREATE_TIME", property = "releaseDate")
+			@Result(column = "CREATE_TIME", property = "releaseDate",javaType = String.class,jdbcType = JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class)
 	})
 	public List<Map<String,Object>> queryRentShopsList();
 
@@ -30,7 +32,7 @@ public interface RentUsersMapper {
 	@Results({
 			@Result(column = "ID",property = "auditId"),
 			@Result(column = "RENT_ID",property = "rentId"),
-			@Result(column = "AUDIT_TIME",property = "auditTime"),
+			@Result(column = "AUDIT_TIME",property = "auditTime",javaType = String.class,jdbcType = JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class),
 			@Result(column = "DESC",property = "desc"),
 			@Result(column = "ADMIN_ID",property = "adminId"),
 
@@ -50,7 +52,7 @@ public interface RentUsersMapper {
 			@Result(column = "EXPECTRENTFEE_MAX", property = "expectRentFeeMax"),
 			@Result(column = "MOBILEPHONE", property = "mobilePhone"),
 			@Result(column = "BUSINESSTYPE", property = "businessType"),
-			@Result(column = "CREATE_TIME", property = "releaseDate")
+			@Result(column = "CREATE_TIME", property = "releaseDate",javaType = String.class,jdbcType = JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class)
 	})
 	public Map<String,Object> queryRentShopsDetailById(String rentId);
 
