@@ -121,8 +121,8 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
 
         HttpEntity<String> formEntity = new HttpEntity<String>(jsonObj, headers);
 
-        String result = template.postForObject(url, formEntity, String.class);
-        logger.info("restTemplate:POST--->"+result);
+        //String result = template.postForObject(url, formEntity, String.class);
+        //logger.info("restTemplate:POST--->"+result);
     }
 	
 	/**
