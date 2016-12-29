@@ -35,8 +35,5 @@ public class MyMD5Utils {
         }  
    
         return hexValue.toString();  
-    } 
-    /*public static void main(String[] args) {
-		System.err.println(getMD5("111111salt"));//685e1ca3c6bb2562df2ccf84d5182d23
-	}*/
+    }
 }
