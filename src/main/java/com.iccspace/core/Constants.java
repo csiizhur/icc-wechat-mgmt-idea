@@ -50,4 +50,7 @@ public class Constants {
 
 	public static final String UPLOAD_PATH_WIN="D://upload//photo//";
 	public static final String UPLOAD_PATH_LINUX="/mnt/iccspace/upload/mgmt_photo/";
+
+	public static final Integer DELETED_0=0;
+	public static final Integer DELETED_1=1;
 }

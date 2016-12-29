@@ -16,7 +16,7 @@ import java.util.Map;
 public interface ShopsHistoryMapper {
 
     //@SelectProvider
-    @Select("<script>select sh.ID,sh.ESTATES_TYPE,s.ADDRESS,s.SHOP_SIZE,sh.RENT_FEE,sh.FLOOR,sh.CREATE_TIME,sh.MOBILEPHONE " +
+    @Select("<script>select sh.ID,sh.ESTATES_TYPE,s.ADDRESS,s.SHOP_SIZE,sh.RENT_FEE,sh.FLOOR,sh.CREATE_TIME,sh.MOBILEPHONE,sh.USERID " +
             "from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id " +
             "where sh.release_type=#{releaseType} and sh.deleted=0 <if test=\"estatesType !=null \"> and sh.estates_type=#{estatesType} </if></script>")
     @Results({
@@ -27,7 +27,8 @@ public interface ShopsHistoryMapper {
             @Result(column = "RENT_FEE",property = "rentFee"),
             @Result(column = "FLOOR",property = "floor"),
             @Result(column = "CREATE_TIME",property = "releaseDate",javaType = String.class,jdbcType= JdbcType.TIMESTAMP,typeHandler = EmptyStringIfNull.class),
-            @Result(column = "MOBILEPHONE",property = "mobilePhone")
+            @Result(column = "MOBILEPHONE",property = "mobilePhone"),
+            @Result(column = "USERID",property = "releaseUserId")
     })
     public List<Map<String,Object>> queryShopsHistoryList(ShopsListRequest shopsListRequest);
 

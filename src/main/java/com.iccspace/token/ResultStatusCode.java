@@ -38,6 +38,8 @@ public enum ResultStatusCode {
 
     MULTIPART_EXCEPTION(40001,"files exceeds its maximum permitted size of 5242880 bytes."),
     SYSTEM_EXCEPTION(40002,"server exception."),
+
+    INVALID_PROPERTY_STATUS(50002,"property status is delete"),
     ;
 
     private int errcode;
