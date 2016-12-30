@@ -7,10 +7,7 @@ import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by zhur on 2016/12/29.
@@ -54,7 +51,8 @@ public class PropertyDeatilController {
      * @param propertyEditModel
      * @return
      */
-    @RequestMapping(method = RequestMethod.POST,value="edit",consumes = "multipart/form-data")
+    @RequestMapping(method = RequestMethod.POST,value="edit",consumes = "multipart/form-data;charset=UTF-8")
+    //@RequestMapping(method = RequestMethod.POST,value="edit",produces = "application/x-www-form-urlencoded;charset=UTF-8")
     public Object propertyEdit(PropertyEditModel propertyEditModel){
 
         ResultMsg resultMsg;
