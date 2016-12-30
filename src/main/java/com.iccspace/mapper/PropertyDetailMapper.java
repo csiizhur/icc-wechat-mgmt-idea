@@ -94,7 +94,7 @@ public interface PropertyDetailMapper {
      * @param propertyEditModel
      * @return
      */
-    @Insert("insert into ADMIN_AUDIT(id,shop_id,audit_time,desc,admin_id,create_time) values(#{auditId},#{shopsId},#{auditTime},#{auditDesc},#{adminId},now())")
+    @Insert("insert into ADMIN_AUDIT(id,shop_id,audit_time,`desc`,admin_id,create_time) values(#{auditId},#{shopsId},#{auditTime},#{auditDesc},#{adminId},now())")
     @SelectKey(statement = "select replace(uuid(),'-','') from dual",before = true,resultType = String.class,keyProperty = "auditId")
     public int insertAuditRecord(PropertyEditModel propertyEditModel);
 

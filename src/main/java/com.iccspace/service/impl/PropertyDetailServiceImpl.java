@@ -3,7 +3,6 @@ package com.iccspace.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.iccspace.aliyun.FileUtil;
 import com.iccspace.aliyun.OssClientUtil;
-import com.iccspace.controller.model.PhotosAddModel;
 import com.iccspace.controller.model.PropertyEditModel;
 import com.iccspace.core.Constants;
 import com.iccspace.mapper.PropertyDetailMapper;
