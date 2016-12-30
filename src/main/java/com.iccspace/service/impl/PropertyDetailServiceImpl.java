@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -50,13 +51,13 @@ public class PropertyDetailServiceImpl implements PropertyDetailService{
         Map<String,Object> releaseUserDetail = propertyDetailMapper.queryReleaseUserDetail(releaseUserId);
         jsonObject.put("releaseUserDetail",releaseUserDetail);
 
-        Map<String,Object> auditDetail = propertyDetailMapper.queryAuditsRecordDetail(shopsId);
+        List<Map<String,Object>> auditDetail = propertyDetailMapper.queryAuditsRecordDetail(shopsId);
         jsonObject.put("auditDetail",auditDetail);
 
         Map<String,Object> remarkDetail = propertyDetailMapper.queryRemarksRecordDetail(shopsId);
         jsonObject.put("remarkDetail",remarkDetail);
 
-        Map<String,Object> contractDetail = propertyDetailMapper.queryContractsRecordDetail(shopsId);
+        List<Map<String,Object>> contractDetail = propertyDetailMapper.queryContractsRecordDetail(shopsId);
         jsonObject.put("contractDetail",contractDetail);
 
         resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(),ResultStatusCode.OK.getErrmsg(),jsonObject);

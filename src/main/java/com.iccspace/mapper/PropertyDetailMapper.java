@@ -5,6 +5,7 @@ import com.iccspace.controller.model.PropertyEditModel;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -61,7 +62,7 @@ public interface PropertyDetailMapper {
             @Result(column = "audit_time",property = "auditTime",typeHandler = EmptyStringIfNull.class,javaType = String.class,jdbcType = JdbcType.TIMESTAMP),
             @Result(column = "desc",property = "description")
     })
-    public Map<String,Object> queryAuditsRecordDetail(String shopsId);
+    public List<Map<String,Object>> queryAuditsRecordDetail(String shopsId);
 
 
     /**
@@ -87,7 +88,7 @@ public interface PropertyDetailMapper {
             @Result(column = "oss_url",property = "contractOssUrl"),
             @Result(column = "description",property = "description")
     })
-    public Map<String,Object> queryContractsRecordDetail(String shopsId);
+    public List<Map<String,Object>> queryContractsRecordDetail(String shopsId);
 
     /**
      * 添加带看记录
