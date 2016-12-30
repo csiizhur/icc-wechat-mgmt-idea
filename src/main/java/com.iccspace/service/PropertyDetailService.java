@@ -1,5 +1,6 @@
 package com.iccspace.service;
 
+import com.iccspace.controller.model.PropertyEditModel;
 import com.iccspace.token.ResultMsg;
 
 /**
@@ -11,5 +12,9 @@ import com.iccspace.token.ResultMsg;
  */
 public interface PropertyDetailService {
 
+    //property detail
     public ResultMsg propertyDetails(String shopsId,String releaseUserId);
+
+    //add contract audit
+    public ResultMsg propertyEdit(PropertyEditModel propertyEditModel);
 }

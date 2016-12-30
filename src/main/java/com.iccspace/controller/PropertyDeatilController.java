@@ -1,6 +1,7 @@
 package com.iccspace.controller;
 
 import com.iccspace.controller.model.PropertyDetailRequest;
+import com.iccspace.controller.model.PropertyEditModel;
 import com.iccspace.service.PropertyDetailService;
 import com.iccspace.token.ResultMsg;
 import com.iccspace.token.ResultStatusCode;
@@ -25,6 +26,11 @@ public class PropertyDeatilController {
     @Autowired
     private PropertyDetailService propertyDetailService;
 
+    /**
+     * property detail
+     * @param propertyDetailRequest
+     * @return
+     */
     @RequestMapping(method = RequestMethod.POST,value = "detail",produces = "application/json;charset=UTF-8")
     public Object propertyDetails(@RequestBody PropertyDetailRequest propertyDetailRequest){
 
@@ -41,5 +47,25 @@ public class PropertyDeatilController {
 
         return resultMsg;
 
+    }
+
+    /**
+     * property edit
+     * @param propertyEditModel
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST,value="edit",consumes = "multipart/form-data")
+    public Object propertyEdit(PropertyEditModel propertyEditModel){
+
+        ResultMsg resultMsg;
+        String shopsId = propertyEditModel.getShopsId();
+
+        if(StringUtils.isEmpty(shopsId)){
+            resultMsg = new ResultMsg(ResultStatusCode.INVALID_SHOPSID.getErrcode(),ResultStatusCode.INVALID_SHOPSID.getErrmsg(),null);
+            return resultMsg;
+        }
+        resultMsg = propertyDetailService.propertyEdit(propertyEditModel);
+
+        return resultMsg;
     }
 }

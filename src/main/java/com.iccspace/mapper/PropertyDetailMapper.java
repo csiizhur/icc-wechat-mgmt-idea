@@ -1,9 +1,8 @@
 package com.iccspace.mapper;
 
 import com.iccspace.config.EmptyStringIfNull;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import com.iccspace.controller.model.PropertyEditModel;
+import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
 import java.util.Map;
@@ -17,6 +16,11 @@ import java.util.Map;
  */
 public interface PropertyDetailMapper {
 
+    /**
+     * 物业基础信息
+     * @param shopsId
+     * @return
+     */
     @Select("select rent_fee,release_type,shop_size,floor,renovation,address,sh.create_time,mobilephone,sh.deleted " +
             "from SHOPS_HISTORY sh join SHOPS s on sh.id=s.historyid " +
             "where sh.id=#{shopsId}")
@@ -33,6 +37,11 @@ public interface PropertyDetailMapper {
     })
     public Map<String,Object> queryShopsDetail(String shopsId);
 
+    /**
+     * 发布用户
+     * @param userId
+     * @return
+     */
     @Select("select id,nickname,sex from USER where id=#{userId}")
     @Results({
             @Result(column = "id",property = "userId"),
@@ -41,6 +50,11 @@ public interface PropertyDetailMapper {
     })
     public Map<String,Object> queryReleaseUserDetail(String userId);
 
+    /**
+     * 带看记录
+     * @param shopsId
+     * @return
+     */
     @Select("select id,audit_time,`desc` from ADMIN_AUDIT where shop_id=#{shopsId}")
     @Results({
             @Result(column = "id",property = "auditId"),
@@ -48,5 +62,50 @@ public interface PropertyDetailMapper {
             @Result(column = "desc",property = "desc")
     })
     public Map<String,Object> queryAuditsRecordDetail(String shopsId);
+
+
+    /**
+     * 备注
+     * @param shopsId
+     * @return
+     */
+    @Select("select id,description from REMARKS where deleted=0 and shop_id=#{shopsId}")
+    @Results({
+            @Result(column = "id",property = "remarkId"),
+            @Result(column = "description",property = "description")
+    })
+    public Map<String,Object> queryRemarksRecordDetail(String shopsId);
+
+    /**
+     * 合同
+     * @param shopsId
+     * @return
+     */
+    @Select("select id,oss_url,description from CONTRACTS where deleted=0 and shop_id=#{shopsId}")
+    @Results({
+            @Result(column = "id",property = "contractId"),
+            @Result(column = "oss_url",property = "contractOssUrl"),
+            @Result(column = "description",property = "description")
+    })
+    public Map<String,Object> queryContractsRecordDetail(String shopsId);
+
+    /**
+     * 添加带看记录
+     * @param propertyEditModel
+     * @return
+     */
+    @Insert("insert into ADMIN_AUDIT(id,shop_id,audit_time,desc,admin_id,create_time) values(#{auditId},#{shopsId},#{auditTime},#{auditDesc},#{adminId},now())")
+    @SelectKey(statement = "select replace(uuid(),'-','') from dual",before = true,resultType = String.class,keyProperty = "auditId")
+    public int insertAuditRecord(PropertyEditModel propertyEditModel);
+
+    /**
+     * 添加合同文件
+     * @param propertyEditModel
+     * @return
+     */
+    @Insert("insert into CONTRACTS(id,shop_id,oss_url,create_time,admin_id) " +
+            "values(#{contractId},#{shopsId},#{ossUrl},now(),#{adminId})")
+    @SelectKey(statement = "select replace(uuid(),'-','') from dual",before = true,resultType = String.class,keyProperty = "contractId")
+    public int insertContractRecord(PropertyEditModel propertyEditModel);
 
 }
