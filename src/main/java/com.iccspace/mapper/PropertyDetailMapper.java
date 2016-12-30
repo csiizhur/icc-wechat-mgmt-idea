@@ -59,7 +59,7 @@ public interface PropertyDetailMapper {
     @Results({
             @Result(column = "id",property = "auditId"),
             @Result(column = "audit_time",property = "auditTime",typeHandler = EmptyStringIfNull.class,javaType = String.class,jdbcType = JdbcType.TIMESTAMP),
-            @Result(column = "desc",property = "desc")
+            @Result(column = "desc",property = "description")
     })
     public Map<String,Object> queryAuditsRecordDetail(String shopsId);
 
