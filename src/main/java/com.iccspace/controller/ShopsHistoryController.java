@@ -42,13 +42,17 @@ public class ShopsHistoryController {
     /**
      * cuzhu list
      * @param estatesType
+     * @param pageNum
      * @return
      */
     @RequestMapping(method = RequestMethod.GET,value = "cuzuList" ,produces = "application/json;charset=UTF-8")
-    public Object cuzuShopsList(String estatesType){
+    public Object cuzuShopsList(String estatesType,Integer pageNum){
         ResultMsg resultMsg;
         ShopsListRequest shopsListRequest = new ShopsListRequest();
         shopsListRequest.setReleaseType(Constants.CHU_ZU);
+
+        pageNum = pageNum == null?Constants.PAGE_NUM:pageNum;
+        shopsListRequest.setPageNum(pageNum);
 
         if(!StringUtils.isEmpty(estatesType)){
             shopsListRequest.setEstatesType(estatesType);

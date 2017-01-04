@@ -1,5 +1,7 @@
 package com.iccspace.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.iccspace.controller.model.AuditAddModel;
 import com.iccspace.controller.model.RentsAddModel;
 import com.iccspace.controller.model.RentsEditModel;
@@ -29,10 +31,12 @@ public class RentUserServiceImpl implements RentUserService {
     private AuditMapper auditMapper;
 
     @Override
-    public ResultMsg rentsList() {
+    public ResultMsg rentsList(Integer pageNum) {
         ResultMsg resultMsg;
+        PageHelper.startPage(pageNum,Constants.PAGE_SIZE);
         List<Map<String,Object>> list = rentUsersMapper.queryRentShopsList();
-        resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"",list);
+        PageInfo pageInfo = new PageInfo(list);
+        resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"rent list",pageInfo);
 
         return resultMsg;
     }

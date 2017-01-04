@@ -2,6 +2,7 @@ package com.iccspace.controller;
 
 import com.iccspace.controller.model.RentsAddModel;
 import com.iccspace.controller.model.RentsEditModel;
+import com.iccspace.core.Constants;
 import com.iccspace.service.RentUserService;
 import com.iccspace.token.Audience;
 import com.iccspace.token.JwtHelper;
@@ -32,11 +33,13 @@ public class RentUsersController {
 
     /**
      * rent list
+     * @param pageNum
      * @return
      */
     @RequestMapping(method = RequestMethod.GET,value = "rentsList",produces = "application/json;charset=UTF-8")
-    public Object rentShopsList(){
-        ResultMsg resultMsg = rentUserService.rentsList();
+    public Object rentShopsList(Integer pageNum){
+        pageNum = pageNum == null? Constants.PAGE_NUM:pageNum;
+        ResultMsg resultMsg = rentUserService.rentsList(pageNum);
         return resultMsg;
     }
 

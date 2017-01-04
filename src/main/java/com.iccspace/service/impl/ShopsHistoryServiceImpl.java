@@ -39,7 +39,8 @@ public class ShopsHistoryServiceImpl implements ShopsHistoryService{
     @Override
     public ResultMsg shopsList(ShopsListRequest shopsListRequest) {
 
-        PageHelper.startPage(1,20);
+        Integer pageNum = shopsListRequest.getPageNum();
+        PageHelper.startPage(pageNum,Constants.PAGE_SIZE);
         List<Map<String,Object>> list = shopsHistoryMapper.queryShopsHistoryList(shopsListRequest);
         PageInfo page= new PageInfo(list);
         ResultMsg resultMsg = new ResultMsg(Constants.OPERATOR_DB_SUCCESS,"shops list", JSONArray.toJSON(page));

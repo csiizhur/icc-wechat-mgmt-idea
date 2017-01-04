@@ -53,4 +53,7 @@ public class Constants {
 
 	public static final Integer DELETED_0=0;
 	public static final Integer DELETED_1=1;
+
+	public static final Integer PAGE_NUM=1;
+	public static final Integer PAGE_SIZE=20;
 }

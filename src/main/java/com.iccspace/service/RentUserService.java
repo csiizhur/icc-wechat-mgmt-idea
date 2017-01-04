@@ -10,7 +10,7 @@ import com.iccspace.token.ResultMsg;
 public interface RentUserService {
 
     //rents list
-    public ResultMsg rentsList();
+    public ResultMsg rentsList(Integer pageNum);
 
     //audits list
     public ResultMsg auditsList(String rentId);

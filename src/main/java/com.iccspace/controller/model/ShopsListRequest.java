@@ -9,6 +9,8 @@ public class ShopsListRequest {
     private String estatesType;
     private String buildType;
 
+    private Integer pageNum;
+
     public int getReleaseType() {
         return releaseType;
     }
@@ -39,5 +41,13 @@ public class ShopsListRequest {
 
     public void setBuildType(String buildType) {
         this.buildType = buildType;
+    }
+
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 }
