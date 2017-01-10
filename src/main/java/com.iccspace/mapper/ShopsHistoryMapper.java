@@ -51,7 +51,7 @@ public interface ShopsHistoryMapper {
     public List<Map<String,Object>> queryShopsAuditListByShopsId(String shopsId);
 
     @Select("select sh.ID,sh.estates_type,sh.create_time,s.shop_size,sh.mobilephone,sh.floor,s.address,sh.rent_fee " +
-            "from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id where sh.deleted=0")
+            "from SHOPS s join SHOPS_HISTORY sh on s.historyid=sh.id where sh.deleted=0 and sh.id=#{shopsId}")
     @Results({
             @Result(column = "ID",property = "shopsId"),
             @Result(column = "estates_type",property = "estatesType"),
