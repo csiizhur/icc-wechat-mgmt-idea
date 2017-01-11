@@ -68,11 +68,12 @@ public interface ShopsHistoryMapper {
             "mobilephone=#{mobilePhone}," +
             "floor=#{floor}," +
             "rent_fee=#{rentFee}" +
+            "create_time=#{releaseDate} " +
             "where id=#{shopsId}")
     public int updateHistoryShops(ShopsEditModel shopsEditModel);
 
     @Update("update SHOPS set shop_size=#{shopSize}," +
-            "address=#{shopsAddress}" +
+            "address=#{shopsAddress} " +
             "where historyid=#{shopsId}")
     public int updateBaseShops(ShopsEditModel shopsEditModel);
 

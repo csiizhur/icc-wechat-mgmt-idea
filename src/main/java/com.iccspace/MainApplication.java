@@ -1,22 +1,12 @@
 package com.iccspace;
 
 import java.util.*;
-
-import javax.annotation.PostConstruct;
 import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.iccspace.interceptor.AdminSecurityInterceptor;
 import com.iccspace.servlet.MyServlet;
-import org.apache.catalina.servlets.DefaultServlet;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -26,36 +16,26 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
-
-
 import com.iccspace.token.Audience;
 import com.iccspace.token.HTTPBasicAuthorizeAttribute;
 import com.iccspace.token.HTTPBearerAuthorizeAttribute;
-import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import org.springframework.web.util.WebAppRootListener;
+
+
 
 @SpringBootApplication
 @EnableConfigurationProperties(Audience.class)
@@ -312,4 +292,21 @@ public class MainApplication extends WebMvcConfigurerAdapter implements Embedded
 
         super.addResourceHandlers(resourceHandlerRegistry);
     }
+
+    /*@Bean
+    public Converter<String, Timestamp> addNewConvert() {
+        return new Converter<String, Timestamp>() {
+            @Override
+            public Timestamp convert(String source) {
+                try {
+                    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                    timestamp = Timestamp.valueOf(source);
+                    return timestamp;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        };
+    }*/
 }

@@ -8,7 +8,6 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-
 import java.nio.charset.Charset;
 import java.util.List;
 
@@ -21,6 +20,24 @@ import java.util.List;
  */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurationSupport{
+
+    //@Autowired
+    //private RequestMappingHandlerAdapter handlerAdapter;
+
+    /**
+     * 增加字符串转日期的功能
+     */
+    /*@PostConstruct
+    public void initEditableValidation() {
+        ConfigurableWebBindingInitializer initializer = (ConfigurableWebBindingInitializer) handlerAdapter
+                .getWebBindingInitializer();
+        if (initializer.getConversionService() != null) {
+            GenericConversionService genericConversionService = (GenericConversionService) initializer
+                    .getConversionService();
+            genericConversionService.addConverter(new TimestampConverter());
+        }
+
+    }*/
 
     @Bean
     public MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {

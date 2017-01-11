@@ -1,6 +1,7 @@
 package com.iccspace.controller;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.iccspace.controller.model.*;
 import com.iccspace.core.Constants;
 import com.iccspace.mapper.ShopsPhotoMapper;
@@ -176,6 +177,7 @@ public class ShopsHistoryController {
      */
     @RequestMapping(method = RequestMethod.POST,value = "shopsEdit",produces = "application/json;charset=UTF-8")
     public Object editShops(@RequestBody ShopsEditModel shopsEditModel){
+    //public Object editShops(@RequestBody JSONObject shopsEditModel){
         ResultMsg resultMsg;
         String shopsId = shopsEditModel.getShopsId();
         String estatesType = shopsEditModel.getEstatesType();
