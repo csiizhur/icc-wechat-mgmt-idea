@@ -93,22 +93,4 @@ public class ShopsEditModel implements Serializable{
     public void setShopsId(String shopsId) {
         this.shopsId = shopsId;
     }
-
-    public static void main(String args[]){
-        String a = "{\"shopsId\":\"myName\",\"releaseDate\":\"2014-11-11 19:01:58\"}";
-        //String a1 = "{shopsId='zhangsan',releaseDate=1412511615062}";
-        ObjectMapper objectMapper = new ObjectMapper();
-        try{
-            ShopsEditModel shopsEditModel = objectMapper.readValue(a,ShopsEditModel.class);
-            System.err.print(shopsEditModel);
-
-            /*ShopsEditModel s = new ShopsEditModel();
-            s.setReleaseDate(new Date());
-            s.setShopsId("qwe");
-            String ss = objectMapper.writeValueAsString(s);
-            System.err.print(ss);*/
-        }catch(IOException e){
-            System.err.print(e);
-        }
-    }
 }
